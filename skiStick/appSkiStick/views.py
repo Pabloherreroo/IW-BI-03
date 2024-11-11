@@ -91,8 +91,19 @@ class EstacionFilterView(ListView):
         
         if localizacion_id:
             queryset = queryset.filter(localizacion_id=localizacion_id)
-        
+                   
+        # Obtenemos las estaciones que tienen el tipo de pista seleccionado a través del modelo de la relación
         if tipo_de_pista_id:
-            queryset = queryset.filter(tipodepista__id=tipo_de_pista_id)
+            estaciones_con_tipo = EstacionTipoDePista.objects.filter(
+                tipo_de_pista_id=tipo_de_pista_id
+            ).values_list('estacion_id', flat=True)
+            queryset = queryset.filter(id__in=estaciones_con_tipo)
         
         return queryset
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Agregar localizaciones y tipos de pista al contexto
+        context['localizaciones'] = Localizacion.objects.all()
+        context['tipos_de_pista'] = TipoDePista.objects.all()
+        return context

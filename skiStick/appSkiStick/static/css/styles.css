@@ -1,5 +1,12 @@
 /* Muy basico de momento, hay que tocarlo */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; 
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -35,15 +42,16 @@ nav ul li a {
 }
 
 main {
+    min-height: 100vh; 
     padding: 1em;
+    box-sizing: border-box;
 }
-
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
