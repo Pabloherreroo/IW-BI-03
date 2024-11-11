@@ -4,13 +4,13 @@
 *.pyc
 __pycache__/
 
-# Environments
-.env  # Ignora archivos de entorno con variables de configuración (sensible)
+# Environments que no sean el skiStick
+.env  # Ignora archivos de entorno con variables de configuración
 venv/
 env/
 venv.bak/
 
-# VSCode y otros editores/IDE
+# VSCode y otros IDE
 .vscode/
 .idea/
 *.sublime-project
