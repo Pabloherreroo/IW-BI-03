@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ estacion.nombre }}</h1>
+    <p>Ubicación: {{ estacion.localizacion.nombre }}</p>
+    <p>Kilómetros de Pista: {{ estacion.km_pistas }} km</p>
+    <p>Descripción: {{ estacion.descripcion }}</p>
+
+    <h2>Pistas</h2>
+    <ul>
+        {% for pista in estacion.pistas.all %}
+            <li>{{ pista.nombre }} - {{ pista.tipo_de_pista }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+

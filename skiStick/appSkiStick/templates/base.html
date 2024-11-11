@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ski Stick</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Ski Stick</a></h1>
+        <nav>
+            <a href="{% url 'estacion_list' %}">Estaciones</a> |
+            <a href="{% url 'localizacion_list' %}">Localizaciones</a> |
+            <a href="{% url 'pista_list' %}">Pistas</a>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ski Stick</p>
+    </footer>
+</body>
+</html>

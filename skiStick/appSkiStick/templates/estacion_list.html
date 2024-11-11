@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Lista de Estaciones</h1>
+    <ul>
+        {% for estacion in estaciones %}
+            <li><a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

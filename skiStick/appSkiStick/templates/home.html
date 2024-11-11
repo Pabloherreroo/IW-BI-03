@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Portada de Ski Stick</h1>
+    <h2>Estaciones Destacadas por Localización</h2>
+    <ul>
+        {% for localizacion, estacion in estaciones_destacadas.items %}
+            {% if estacion %}
+                <li>{{ localizacion }}: <a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a> - {{ estacion.km_pistas }} km esquiables</li>
+            {% else %}
+                <li>{{ localizacion }}: No hay estaciones disponibles</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+
+
