@@ -2,15 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web de estaciones de esquí en España y Andorra, con información detallada sobre pistas y localizaciones.">
     <title>Ski Stick</title>
+    <!--Hoja de estilos CSS desde static-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header>
         <h1><a href="{% url 'home' %}">Ski Stick</a></h1>
         <nav>
-            <a href="{% url 'estacion_list' %}">Estaciones</a> |
-            <a href="{% url 'localizacion_list' %}">Localizaciones</a> |
-            <a href="{% url 'pista_list' %}">Pistas</a>
+            <ul>
+                <li><a href="{% url 'estacion_list' %}">Estaciones</a></li>
+                <li><a href="{% url 'localizacion_list' %}">Localizaciones</a></li>
+                <li><a href="{% url 'pista_list' %}">Tipos de Pista</a></li>
+            </ul>
         </nav>
     </header>
     

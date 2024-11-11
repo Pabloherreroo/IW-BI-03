@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Filtrar Estaciones</h1>
+
+<form method="get" action="{% url 'estacion_filter' %}">
+    <label for="localizacion">Localización:</label>
+    <select name="localizacion" id="localizacion">
+        <option value="">Todas</option>
+        {% for localizacion in localizaciones %}
+            <option value="{{ localizacion.id }}" {% if localizacion.id|stringformat:"s" == request.GET.localizacion %}selected{% endif %}>
+                {{ localizacion.nombre }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <label for="tipo_de_pista">Tipo de Pista:</label>
+    <select name="tipo_de_pista" id="tipo_de_pista">
+        <option value="">Todos</option>
+        {% for tipo in tipos_de_pista %}
+            <option value="{{ tipo.id }}" {% if tipo.id|stringformat:"s" == request.GET.tipo_de_pista %}selected{% endif %}>
+                {{ tipo.nombre }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Filtrar</button>
+</form>
+
+<!-- Lista de Estaciones Filtradas -->
+<h2>Estaciones Encontradas</h2>
+<ul>
+    {% for estacion in estaciones %}
+        <li>
+            <a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a> - {{ estacion.km_pistas }} km esquiables
+        </li>
+    {% empty %}
+        <li>No se encontraron estaciones con los filtros seleccionados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
