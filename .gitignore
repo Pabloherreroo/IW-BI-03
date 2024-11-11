@@ -1,0 +1,29 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3  # Ignora la base de datos SQLite si la usas
+
+# Environments
+.env  # Ignora archivos de entorno con variables de configuración (sensible)
+venv/
+env/
+venv.bak/
+
+# Django Migrations
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Pytest Cache
+.pytest_cache/
+
+# VSCode y otros editores/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de configuraciones del sistema
+.DS_Store
+Thumbs.db
