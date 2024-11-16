@@ -15,9 +15,7 @@
     <h3>Estación Similar</h3>
     <p>
         La estación más cercana en kilómetros esquiables es 
-        <a href="{% url 'estacion_detail' estacion_similar.pk %}">
-            {{ estacion_similar.nombre }}
-        </a>, con {{ estacion_similar.km_pistas }} km esquiables.
+        <a href="{% url 'estacion_detail' estacion_similar.pk %}">{{ estacion_similar.nombre }}</a>, con {{ estacion_similar.km_pistas }} km esquiables.
     </p>
 {% else %}
     <p>No hay estaciones similares en esta localización.</p>

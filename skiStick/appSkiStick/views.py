@@ -25,12 +25,6 @@ class HomeView(TemplateView):
         return context
 
 
-# Lista de estaciones
-class EstacionListView(ListView):
-    model = Estacion
-    template_name = "estacion_list.html"
-    context_object_name = "estaciones"
-
 # Detalle de una estación
 class EstacionDetailView(DetailView):
     model = Estacion
@@ -78,10 +72,10 @@ class PistaDetailView(DetailView):
     template_name = "pista_detail.html"
     context_object_name = "pista"
 
-# Muestra estaciones filtradas por localización y/o tipo de pista
-class EstacionFilterView(ListView):
+# Lista de estaciones + filtro por localización y/o tipo de pista
+class EstacionListView(ListView):
     model = Estacion
-    template_name = "estacion_filter.html"
+    template_name = "estacion_list.html"
     context_object_name = "estaciones"
 
     def get_queryset(self):
