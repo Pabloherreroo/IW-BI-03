@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Lista de Estaciones</h1>
-    <ul>
+    <div class="estaciones-lista">
         {% for estacion in estaciones %}
-            <li><a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a></li>
+            <div class="estacion-item">
+                {% if estacion.imagen %}
+                <img src="{{ estacion.imagen.url }}" alt="{{ estacion.nombre }}" class="estacion-imagen">
+                {% endif %}
+                
+                <div class="estacion-info">
+                    <h2><a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a></h2>
+                    <p>Localización: {{ estacion.localizacion }}</p>
+                    <p>Km pistas: {{ estacion.km_pistas }} km</p>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}

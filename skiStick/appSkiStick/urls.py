@@ -9,6 +9,8 @@ from .views import (
     HomeView,
     EstacionFilterView,
 )
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('estaciones/', EstacionListView.as_view(), name='estacion_list'),
@@ -20,3 +22,6 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('estaciones/filtrar/', EstacionFilterView.as_view(), name='estacion_filter'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

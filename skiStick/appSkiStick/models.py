@@ -41,6 +41,7 @@ class Estacion(models.Model):
     km_pistas = models.DecimalField(max_digits=5, decimal_places=2, help_text="Longitud total esquiable en kilómetros")
     descripcion = models.TextField(blank=True, null=True)
     tipos_pista = models.ManyToManyField(TipoDePista, through='EstacionTipoDePista', related_name="estaciones")
+    imagen = models.ImageField(upload_to='estaciones/', blank=True, null=True, verbose_name='imagen')
 
     def __str__(self):
         return self.nombre
