@@ -1,25 +1,51 @@
 {% extends "base.html" %}
-
 {% block content %}
-<h1>{{ estacion.nombre }}</h1>
-<p>Kilómetros esquiables: {{ estacion.km_pistas }} km</p>
+<h1 class="estacion-titulo">{{ estacion.nombre }}</h1>
+<div class="estacion-detalle">
+    <div class="estacion-detalle-info-imagen">
+        <div class="estacion-detalle-info">
+            <p>{{ estacion.descripcion }}</p>
 
-<h2>Pistas</h2>
-<ul>
-    {% for tipo in tipos_con_cantidad %}
-        <li>{{ tipo.tipo_de_pista.nombre }}: {{ tipo.cantidad }} pistas</li>
-    {% endfor %}
-</ul>
+            <p>Kilómetros esquiables: {{ estacion.km_pistas }} km</p>
 
-{% if estacion_similar %}
-    <h3>Estación Similar</h3>
-    <p>
-        La estación más cercana en kilómetros esquiables es 
-        <a href="{% url 'estacion_detail' estacion_similar.pk %}">{{ estacion_similar.nombre }}</a>, con {{ estacion_similar.km_pistas }} km esquiables.
-    </p>
-{% else %}
-    <p>No hay estaciones similares en esta localización.</p>
-{% endif %}
+            <h2>Pistas</h2>
+            <ul>
+                {% for tipo in tipos_con_cantidad %}
+                    <li class="estacion-detalle-pistas">{{ tipo.tipo_de_pista.nombre }}: {{ tipo.cantidad }} pistas</li>
+                {% endfor %}
+            </ul>
+
+            {% if estacion_similar %}
+                <h2>Estación Similar</h2>
+                <p>
+                    La estación más cercana en kilómetros esquiables es 
+                    <a href="{% url 'estacion_detail' estacion_similar.pk %}">{{ estacion_similar.nombre }}</a>, con {{ estacion_similar.km_pistas }} km esquiables.
+                </p>
+            {% else %}
+                <p>No hay estaciones similares en esta localización.</p>
+            {% endif %}
+        </div>
+        {% if estacion.imagen %}
+            <img src="{{ estacion.imagen.url }}" alt="{{ estacion.nombre }}" class="estacion-detalle-imagen">
+        {% endif %}
+    </div>
+    
+    {% if estacion.imagen_plano %}
+    <div class="estacion-detalle-info-plano">
+            <h2>Plano de pistas</h2>
+            <p>Haz click en la imagen inferior para ver el plano de esta estación:</p>
+    </div>
+    <div class="estacion-detalle-plano">
+        <img src="{{ estacion.imagen_plano.url }}" alt="{{ estacion.nombre }} plano" class="estacion-detalle-imagen-plano">
+        <div class="icono-zoom"  onclick="openInNewTab('{{ estacion.imagen_plano.url }}')">🔍</div>
+    </div>
+    <script>
+        function openInNewTab(url) {
+            window.open(url, '_blank').focus();
+        }
+    </script>
+    {% endif %}
+</div>
 {% endblock %}
 
 

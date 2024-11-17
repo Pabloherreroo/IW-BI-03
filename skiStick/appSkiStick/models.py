@@ -42,6 +42,7 @@ class Estacion(models.Model):
     descripcion = models.TextField(blank=True, null=True)
     tipos_pista = models.ManyToManyField(TipoDePista, through='EstacionTipoDePista', related_name="estaciones")
     imagen = models.ImageField(upload_to='estaciones/', blank=True, null=True, verbose_name='imagen')
+    imagen_plano = models.ImageField(upload_to='estaciones/', blank=True, null=True, verbose_name='imagen_plano')
 
     def __str__(self):
         return self.nombre
