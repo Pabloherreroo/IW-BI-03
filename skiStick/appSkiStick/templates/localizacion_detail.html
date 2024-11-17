@@ -3,13 +3,15 @@
 {% block content %}
 <h1>{{ localizacion.nombre }}</h1>
 <p>{{ localizacion.descripcion }}</p>
-
+<p><strong>Latitud:</strong> {{ localizacion.latitud }}</p>
+<p><strong>Longitud:</strong> {{ localizacion.longitud }}</p>
 <h2>Estaciones asociadas:</h2>
 <ul>
     {% for estacion in estaciones %}
-    <li>{{ estacion.nombre }}</li>
+    <li>{{ estacion.nombre }} - {{ estacion.km_pistas }} km esquiables</li>
     {% empty %}
     <li>No hay estaciones asociadas a esta localizacion.</li>
     {% endfor %}
 </ul>
+<a href="{% url 'localizacion_list' %}">Volver al mapa</a>
 {% endblock %}

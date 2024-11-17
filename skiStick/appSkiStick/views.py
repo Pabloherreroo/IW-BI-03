@@ -58,7 +58,7 @@ class LocalizacionListView(ListView):
    def get_context_data(self, **kwargs):
        context = super().get_context_data(**kwargs)
        # Serializar el QuerySet a una lista de diccionarios
-       localizaciones = Localizacion.objects.all().values('nombre', 'descripcion', 'latitud', 'longitud')
+       localizaciones = Localizacion.objects.all().values('id', 'nombre', 'descripcion', 'latitud', 'longitud')
        context['localizaciones_json'] = json.dumps(list(localizaciones))
         # Imprime en el servidor para verificar
        print(context['localizaciones_json'])

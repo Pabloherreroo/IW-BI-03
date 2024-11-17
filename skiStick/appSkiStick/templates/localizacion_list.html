@@ -23,9 +23,17 @@
     }).addTo(map);
 
     // Agregar marcadores para cada localizacion
-    localizaciones.forEach(function(loc) {
-        L.marker([loc.latitud, loc.longitud]).addTo(map)
+    localizaciones.forEach(function (loc) {
+        var marker = L.marker([loc.latitud, loc.longitud]).addTo(map)
             .bindPopup(`<strong>${loc.nombre}</strong><br>${loc.descripcion}`);
+
+        // Evento de Double-click para navegar en ventana de detalle
+        marker.on('dblclick', function () {
+            console.log(localizaciones);
+            // Navegar a pagina localizacion_detail.html con id
+            window.location.href = `/localizacion/${loc.id}/`;
+        });
     });
+
 </script>
 {% endblock %}
