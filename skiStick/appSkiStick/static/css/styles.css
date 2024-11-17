@@ -53,18 +53,18 @@ main {
     justify-content: center;
 }
 
-main h1 {
-    color: #333;
-    text-shadow: 1px 1px 2px #f9f9f9;
-    margin-left: 25px;
-}
-
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em;
     bottom: 0;
+}
+
+.estaciones-lista-titulo {
+    color: #333;
+    text-shadow: 1px 1px 2px #f9f9f9;
+    margin-left: 25px;
 }
 
 .estaciones-lista {
@@ -85,6 +85,7 @@ footer {
 .estaciones-lista select{
     border-radius: 5px;
     margin: 0px 20px 0px 5px;
+    text-transform: capitalize;
 }
 
 .estaciones-lista form button {

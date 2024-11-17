@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Lista de Estaciones</h1>
-
+    <h1 class="estaciones-lista-titulo">Lista de Estaciones</h1>
     <div class="estaciones-lista">
         <form method="get" action="{% url 'estacion_list' %}">
             <label for="localizacion">Localización:</label>
