@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ localizacion.nombre }}</h1>
+<p>{{ localizacion.descripcion }}</p>
+
+<h2>Estaciones asociadas:</h2>
+<ul>
+    {% for estacion in estaciones %}
+    <li>{{ estacion.nombre }}</li>
+    {% empty %}
+    <li>No hay estaciones asociadas a esta localizacion.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -3,6 +3,9 @@ from django.db import models
 class Localizacion(models.Model):
     nombre = models.CharField(max_length=100, unique=True)
     descripcion = models.TextField(blank=True, null=True)
+    latitud = models.FloatField(null=True, blank=True)
+    longitud = models.FloatField(null=True, blank=True)
+
 
     def __str__(self):
         return self.nombre

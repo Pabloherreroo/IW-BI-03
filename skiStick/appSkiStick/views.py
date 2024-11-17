@@ -48,17 +48,32 @@ class EstacionDetailView(DetailView):
 
         return context
 
-# Lista de localizaciones
+#Mapa de localizaciones  
 class LocalizacionListView(ListView):
-    model = Localizacion
-    template_name = "localizacion_list.html"
-    context_object_name = "localizaciones"
+   model = Localizacion     
+   template_name = "localizacion_list.html"
+   context_object_name = "localizaciones"   
 
-# Detalle de una localización
+   def get_context_data(self, **kwargs):
+       context = super().get_context_data(**kwargs)
+       # Serializar el QuerySet a una lista de diccionarios
+       localizaciones = Localizacion.objects.all().values('nombre', 'descripcion', 'latitud', 'longitud')
+       context['localizaciones_json'] = json.dumps(list(localizaciones))
+        # Imprime en el servidor para verificar
+       print(context['localizaciones_json'])
+       return context
+
+# Detalle de una localizacion     
 class LocalizacionDetailView(DetailView):
-    model = Localizacion
-    template_name = "localizacion_detail.html"
-    context_object_name = "localizacion"
+   model = Localizacion
+   template_name = "localizacion_detail.html"   
+   context_object_name = "localizacion"
+   def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Obtener todas las estaciones asociadas a esta localizacion
+        context['estaciones'] = self.object.estaciones.all()
+        return context
+
 
 # Lista de tipos de pistas
 class PistaListView(ListView):

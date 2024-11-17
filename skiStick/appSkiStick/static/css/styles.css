@@ -248,3 +248,10 @@ footer {
     width: 50px;
 }
 /* Leire haz cambios aqui debajo de este comentario porfa*/
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}

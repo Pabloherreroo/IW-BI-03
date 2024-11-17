@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Mapa de Localizaciones</h1>
+
+<!-- Contenedor para el mapa -->
+<div id="map" style="height: 500px; width: 100%;"></div>
+
+<!-- Script para inicializar el mapa -->
+<script>
+    // Datos de las localizaciones cargados desde Django
+    var localizaciones = JSON.parse('{{ localizaciones_json|safe }}');
+    console.log(localizaciones); // Verifica que los datos se estan cargando correctamente
+
+    // Inicializar el mapa
+    var map = L.map('map').setView([40.416775, -3.703790], 5); // Centrado en Espana
+
+    // Agregar la capa base de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: 'Map data  <a href="https://openstreetmap.org">OpenStreetMap contributors</a>'
+    }).addTo(map);
+
+    // Agregar marcadores para cada localizacion
+    localizaciones.forEach(function(loc) {
+        L.marker([loc.latitud, loc.longitud]).addTo(map)
+            .bindPopup(`<strong>${loc.nombre}</strong><br>${loc.descripcion}`);
+    });
+</script>
+{% endblock %}
