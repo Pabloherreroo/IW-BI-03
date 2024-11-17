@@ -1,3 +1,4 @@
+
 from django.urls import path
 from .views import (
     EstacionListView,
@@ -7,6 +8,7 @@ from .views import (
     PistaListView,
     PistaDetailView,
     HomeView,
+    #EstacionFilterView,
 )
 from django.conf import settings
 from django.conf.urls.static import static
@@ -19,6 +21,8 @@ urlpatterns = [
     path('pistas/', PistaListView.as_view(), name='pista_list'),
     path('pista/<int:pk>/', PistaDetailView.as_view(), name='pista_detail'),
     path('', HomeView.as_view(), name='home'),
+    #path('filtros/', EstacionFilterView.as_view(), name='estacion_filter'),
+    
 ]
 
 if settings.DEBUG:

@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, TemplateView
 from .models import Estacion, Localizacion, TipoDePista, EstacionTipoDePista
@@ -100,4 +101,18 @@ class EstacionListView(ListView):
         # Agregar localizaciones y tipos de pista al contexto
         context['localizaciones'] = Localizacion.objects.all()
         context['tipos_de_pista'] = TipoDePista.objects.all()
-        return context
+        return 
+    """
+    class EstacionFilterView(ListView):
+        model = Estacion
+        template_name = 'estacion_filter.html' 
+        context_object_name = 'estaciones'
+
+        def get_queryset(self):
+            # Agregar lógica para filtrar estaciones
+            query = self.request.GET.get('q')
+            if query:
+                return Estacion.objects.filter(nombre__icontains=query)
+            return Estacion.objects.all()
+
+        """
