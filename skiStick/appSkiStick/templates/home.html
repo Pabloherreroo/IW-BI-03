@@ -1,19 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Portada de Ski Stick</h1>
-    <h2>Estaciones Destacadas por Localización</h2>
-    <ul>
-        {% for localizacion, estacion in estaciones_destacadas.items %}
-            {% if estacion %}
-                <li>{{ localizacion }}: <a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a> - {{ estacion.km_pistas }} km esquiables</li>
-            {% else %}
-                <li>{{ localizacion }}: No hay estaciones disponibles</li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-    <br>
-    <h3>Filtrar Estaciones</h3>
-    <a href="{% url 'estacion_list' %}">Ir a la página de filtros</a>
+{% load static %}
+<div class="portada">
+    <div class="ski-stick-imagen">
+        <img src="{% static 'img/banner.jpg' %}" alt="Ski Stick Banner">
+    </div>
+    <div class="portada-info">
+        <h2>Bienvenidos</h2>
+        <p>¡Bienvenidos a nuestra guía definitiva de estaciones de esquí!
+            Aquí encontrarás toda la información que necesitas para planificar tu próxima aventura en la nieve.
+            Desde las mejores <a href="{% url 'estacion_list' %}">estaciones</a> de esquí en diversos rincones de nuestro país hasta una completa descripción de las mejores <a href="{% url 'localizacion_list' %}">localizaciones</a> y <a href="{% url 'pista_list' %}">pistas</a>, nuestro objetivo es ayudarte a descubrir destinos increíbles para todos los niveles y estilos.
+            Ya seas un principiante que busca pistas suaves o un esquiador avanzado en busca de descensos desafiantes, aquí encontrarás toda la información que necesitas para escoger el destino ideal.
+            ¡Prepárate para deslizarte por las montañas más impresionantes y vivir momentos inolvidables en la nieve!</p>
+        <br>
+        <h2>Estaciones Destacadas</h2>
+        <p>Estas son las estaciones más largas de cada localización:</p>
+        <ul>
+            {% for localizacion, estacion in estaciones_destacadas.items %}
+                {% if estacion %}
+                    <li>{{ localizacion }}: <a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a> - {{ estacion.km_pistas }} km esquiables</li>
+                {% else %}
+                    <li>{{ localizacion }}: No hay estaciones disponibles</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <br>
+        <div class="buscar">
+            <div>
+                <h3>Buscar Estaciones</h3>
+                <img src="{% static 'img/estacion.png' %}" alt="Estacion"><br><br>
+                <a href="{% url 'estacion_list' %}">Ir a la lista de estaciones</a>
+            </div>
+            <div>
+                <h3>Buscar Localizaciones</h3>
+                <img src="{% static 'img/localizacion.png' %}" alt="Localizacion"><br><br>
+                <a href="{% url 'localizacion_list' %}">Ir a la lista de localizaciones</a>
+            </div>
+            <div>
+                <h3>Buscar Pistas</h3>
+                <img src="{% static 'img/pista.png' %}" alt="Pista"><br><br>
+                <a href="{% url 'pista_list' %}">Ir a la lista de pistas</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 
