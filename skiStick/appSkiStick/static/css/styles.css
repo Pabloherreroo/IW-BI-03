@@ -261,10 +261,11 @@ footer {
     margin-left: 25px;
 }
 
-.pistas-lista {
+.pistas-lista-centrar{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 25px 200px;
 }
 
 .pistas-lista {
@@ -283,6 +284,7 @@ footer {
     background-color: #f9f9f9;
     padding: 10px 20px;
     text-align: justify;
+    margin: 10px;
 }
 
 .pista-item:nth-child(5) {
@@ -307,6 +309,50 @@ footer {
 }
 
 .pista-info a:visited {
+    color: royalblue;
+}
+
+/* PISTA DETALLE */
+
+.pista-detalle {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 30px 100px;
+    text-align: justify;
+}
+
+.pista-estacion {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: lightslategray;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 100px;
+}
+
+.pista-estacion img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.pista-estacion h3{
+    flex: 1;
+    margin: 0;
+}
+
+.pista-estacion a {
+    color: deepskyblue;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+.pista-estacion a:visited {
     color: royalblue;
 }
 

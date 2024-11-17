@@ -69,6 +69,7 @@ class LocalizacionDetailView(DetailView):
    model = Localizacion
    template_name = "localizacion_detail.html"   
    context_object_name = "localizacion"
+   
    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # Obtener todas las estaciones asociadas a esta localizacion
@@ -87,6 +88,12 @@ class PistaDetailView(DetailView):
     model = TipoDePista
     template_name = "pista_detail.html"
     context_object_name = "pista"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Obtener el número de pistas de ese tipo para cada estación
+        context['estaciones_con_cantidad'] = EstacionTipoDePista.objects.filter(tipo_de_pista=self.object)
+        return context
 
 # Lista de estaciones + filtro por localización y/o tipo de pista
 class EstacionListView(ListView):
