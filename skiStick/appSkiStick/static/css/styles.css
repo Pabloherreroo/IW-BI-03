@@ -59,6 +59,8 @@ footer {
     bottom: 0;
 }
 
+/* LISTA ESTACIONES */
+
 .estaciones-lista-titulo {
     color: #333;
     text-shadow: 1px 1px 2px #f9f9f9;
@@ -131,6 +133,8 @@ footer {
     color: royalblue;
 }
 
+/* ESTACION DETALLE */
+
 .estacion-titulo {
     color: #333;
     text-shadow: 1px 1px 2px #f9f9f9;
@@ -193,6 +197,8 @@ footer {
     cursor: pointer;
 }
 
+/* PORTADA */
+
 .portada {
     display: flex;
     flex-direction: column;
@@ -247,6 +253,54 @@ footer {
 .buscar img {
     width: 50px;
 }
+
+/* LISTA PISTAS */
+.pistas-lista-titulo {
+    color: #333;
+    text-shadow: 1px 1px 2px #f9f9f9;
+    margin-left: 25px;
+}
+
+.pistas-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pista-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    width: 50vw;
+    padding: 10px 40px;
+    text-align: justify;
+}
+
+.pista-item img {
+    border-radius: 10px;
+}
+
+.pista-imagen {
+    width: 75px;
+    border-radius: 10px;
+    margin: 0px 20px 0px 0px;
+}
+
+.pista-info a {
+    color: deepskyblue;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.pista-info a:visited {
+    color: royalblue;
+}
+
+
 /* Leire haz cambios aqui debajo de este comentario porfa*/
 #map {
     height: 500px;

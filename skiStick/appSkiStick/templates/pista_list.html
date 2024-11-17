@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="pistas-lista-titulo">Tipos de Pista</h1>
+    <div class="pistas-lista">
+        {% for pista in pistas %}
+            <div class="pista-item">
+                {% if pista.bandera %}
+                <img src="{{ pista.bandera.url }}" alt="{{ pista.nombre }}" class="pista-imagen">
+                {% endif %}
+                
+                <div class="pista-info">
+                    <h2><a href="{% url 'pista_detail' pista.pk %}">{{ pista.nombre }}</a></h2>
+                    {% if pista.descripcion_corta %}
+                    <p>{{ pista.descripcion_corta }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

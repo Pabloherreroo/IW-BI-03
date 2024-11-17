@@ -28,6 +28,9 @@ class TipoDePista(models.Model):
     ]
     nombre = models.CharField(max_length=20, choices=TIPO_CHOICES, unique=True)
     nivel = models.CharField(max_length=20, editable=False)
+    bandera = models.ImageField(upload_to='pistas/', blank=True, null=True, verbose_name='bandera_pista')
+    descripcion_corta = models.TextField(blank=True, null=True)
+    descripcion_larga = models.TextField(blank=True, null=True)
 
     #Esto se incluye para que al guardar, designe automáticamente el nivel
     def save(self, *args, **kwargs):
