@@ -1,17 +1,31 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<h1>{{ localizacion.nombre }}</h1>
-<p>{{ localizacion.descripcion }}</p>
-<p><strong>Latitud:</strong> {{ localizacion.latitud }}</p>
-<p><strong>Longitud:</strong> {{ localizacion.longitud }}</p>
-<h2>Estaciones asociadas:</h2>
-<ul>
+<div class="localizacion-header">
+    <h1>{{ localizacion.nombre }}</h1>
+    <p>{{ localizacion.descripcion }}</p>
+    {% if localizacion.imagen %}
+    <img src="{{ localizacion.imagen.url }}" alt="{{ localizacion.nombre }}" class="localizacion-image">
+    {% endif %}
+</div>
+
+<div class="estaciones-lista">
+    <h2>Estaciones Asociadas</h2>
     {% for estacion in estaciones %}
-    <li>{{ estacion.nombre }} - {{ estacion.km_pistas }} km esquiables</li>
+    <div class="estacion-item">
+        {% if estacion.imagen %}
+        <img src="{{ estacion.imagen.url }}" alt="{{ estacion.nombre }}" class="estacion-imagen">
+        {% endif %}
+        <div class="estacion-info">
+            <h3><a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a></h3>
+            <p>Km Pistas: {{ estacion.km_pistas }} km</p>
+            <p>Localizacion: {{ estacion.localizacion.nombre }}</p>
+        </div>
+    </div>
     {% empty %}
-    <li>No hay estaciones asociadas a esta localizacion.</li>
+    <p>No hay estaciones asociadas a esta localizacion.</p>
     {% endfor %}
-</ul>
-<a href="{% url 'localizacion_list' %}">Volver al mapa</a>
+</div>
 {% endblock %}
+

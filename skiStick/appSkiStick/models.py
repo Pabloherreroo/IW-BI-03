@@ -5,7 +5,7 @@ class Localizacion(models.Model):
     descripcion = models.TextField(blank=True, null=True)
     latitud = models.FloatField(null=True, blank=True)
     longitud = models.FloatField(null=True, blank=True)
-
+    imagen = models.ImageField(upload_to='localizacion/', blank=True, null=True, verbose_name='imagen_localizacion')
 
     def __str__(self):
         return self.nombre

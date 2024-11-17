@@ -2,13 +2,16 @@
 {% load static %}
 
 {% block content %}
-<h1>Mapa de Localizaciones</h1>
+<div class="localizacion-lista-header">
+    <h1>Mapa de Localizaciones</h1>
+    <p>Un click para conocer un poco las localizaciones</p>
+    <p>Doble click para saber detalles ;)</p>
+</div>
+    <!-- Contenedor para el mapa -->
+    <div id="map" style="height: 500px; width: 100%;"></div>
 
-<!-- Contenedor para el mapa -->
-<div id="map" style="height: 500px; width: 100%;"></div>
-
-<!-- Script para inicializar el mapa -->
-<script>
+    <!-- Script para inicializar el mapa -->
+    <script>
     // Datos de las localizaciones cargados desde Django
     var localizaciones = JSON.parse('{{ localizaciones_json|safe }}');
     console.log(localizaciones); // Verifica que los datos se estan cargando correctamente
@@ -35,5 +38,5 @@
         });
     });
 
-</script>
-{% endblock %}
+    </script>
+    {% endblock %}
