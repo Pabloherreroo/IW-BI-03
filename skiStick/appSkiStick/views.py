@@ -124,3 +124,4 @@ class EstacionListView(ListView):
         context['localizaciones'] = Localizacion.objects.all()
         context['tipos_de_pista'] = TipoDePista.objects.all()
         return context
+    

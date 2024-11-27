@@ -1,0 +1,30 @@
+body {
+    font-family: 'Arial', sans-serif !important; 
+    background-color: #f9f9f9 !important;
+}
+
+#header {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    padding: 10px 20px;
+}
+
+.module h2 {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    background-color: #4CAF50 !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049 !important;
+}
