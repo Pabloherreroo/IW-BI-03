@@ -1,57 +1,57 @@
 [
-{
-  "model": "appSkiStick.tipodepista",
-  "pk": 1,
-  "fields": {
-    "nombre": "verde",
-    "nivel": "Principiante",
-    "bandera": "pistas/bandera_verde.png",
-    "descripcion_corta": "Pistas f·ciles, ideales para principiantes. Suelen ser de poca pendiente y permiten a los nuevos esquiadores aprender y ganar confianza en el control de los esquÌs.",
-    "descripcion_larga": "Las pistas verdes son las m·s f·ciles y est·n pensadas para quienes se inician en el esquÌ o el snowboard. Estas pistas tienen una pendiente suave y son amplias, lo que facilita el aprendizaje y la pr·ctica de los movimientos b·sicos sin demasiada velocidad. Su diseÒo permite a los principiantes ganar confianza en la postura y el control de los esquÌs mientras se acostumbran a las tÈcnicas de frenado y giro. Las pistas verdes suelen estar cerca de la base de la estaciÛn y pueden contar con instructores para quienes est·n aprendiendo."
+  {
+    "model": "appSkiStick.tipodepista",
+    "pk": 1,
+    "fields": {
+      "nombre": "verde",
+      "nivel": "Principiante",
+      "bandera": "pistas/bandera_verde.png",
+      "descripcion_corta": "Pistas f√°ciles, ideales para principiantes. Suelen ser de poca pendiente y permiten a los nuevos esquiadores aprender y ganar confianza en el control de los esqu√≠s.",
+      "descripcion_larga": "Las pistas verdes son las m√°s f√°ciles y est√°n pensadas para quienes se inician en el esqu√≠ o el snowboard. Estas pistas tienen una pendiente suave y son amplias, lo que facilita el aprendizaje y la pr√°ctica de los movimientos b√°sicos sin demasiada velocidad. Su dise√±o permite a los principiantes ganar confianza en la postura y el control de los esqu√≠s mientras se acostumbran a las t√©cnicas de frenado y giro. Las pistas verdes suelen estar cerca de la base de la estaci√≥n y pueden contar con instructores para quienes est√°n aprendiendo."
+    }
+  },
+  {
+    "model": "appSkiStick.tipodepista",
+    "pk": 2,
+    "fields": {
+      "nombre": "azul",
+      "nivel": "Amateur",
+      "bandera": "pistas/bandera_azul.png",
+      "descripcion_corta": "Pistas de nivel intermedio, perfectas para quienes ya dominan lo b√°sico. Tienen una pendiente moderada, lo que permite disfrutar de mayor velocidad sin grandes dificultades.",
+      "descripcion_larga": "Las pistas azules representan el siguiente nivel de dificultad y son ideales para esquiadores que ya dominan lo b√°sico y quieren experimentar una mayor velocidad y desaf√≠os. Estas pistas tienen una pendiente moderada y permiten a los esquiadores intermedios mejorar su t√©cnica de giro y control. A menudo ofrecen mayor variedad en su trazado, con curvas y secciones algo m√°s empinadas, manteni√©ndose accesibles para quienes buscan progresar sin encontrarse con descensos extremos."
+    }
+  },
+  {
+    "model": "appSkiStick.tipodepista",
+    "pk": 3,
+    "fields": {
+      "nombre": "roja",
+      "nivel": "Avanzado",
+      "bandera": "pistas/bandera_roja.png",
+      "descripcion_corta": "Pistas de nivel avanzado. Su inclinaci√≥n es mayor y requieren habilidad para manejar la velocidad y giros. Ideales para esquiadores con buena t√©cnica que buscan un reto adicional.",
+      "descripcion_larga": "Las pistas rojas est√°n dise√±adas para esquiadores avanzados que se sienten c√≥modos en condiciones de pendiente m√°s pronunciada y son capaces de maniobrar a mayor velocidad. Estas pistas presentan desaf√≠os adicionales, como giros m√°s cerrados y secciones con mayor inclinaci√≥n, que requieren una buena t√©cnica de frenado y control. Las pistas rojas ofrecen una experiencia emocionante y din√°mica y permiten a los esquiadores perfeccionar su estilo en terrenos variados y m√°s complejos."
+    }
+  },
+  {
+    "model": "appSkiStick.tipodepista",
+    "pk": 4,
+    "fields": {
+      "nombre": "negra",
+      "nivel": "Experto",
+      "bandera": "pistas/bandera_negra.png",
+      "descripcion_corta": "Pistas de m√°xima dificultad. Son empinadas, estrechas o presentan condiciones complejas. Reservadas para expertos debido a su exigencia t√©cnica.",
+      "descripcion_larga": "Las pistas negras son las m√°s dif√≠ciles y est√°n reservadas para esquiadores expertos con una gran habilidad t√©cnica y experiencia en la monta√±a. Suelen ser las m√°s empinadas y pueden incluir condiciones complicadas, como nieve dura, desniveles y tramos estrechos. Estas pistas requieren un control preciso de la velocidad y las t√©cnicas de giro, as√≠ como resistencia f√≠sica. En muchos casos, las pistas negras tambi√©n est√°n en √°reas menos acondicionadas, ofreciendo un terreno m√°s salvaje y desafiante, donde se requiere experiencia y confianza para descender de forma segura."
+    }
+  },
+  {
+    "model": "appSkiStick.tipodepista",
+    "pk": 5,
+    "fields": {
+      "nombre": "competici√≥n",
+      "nivel": "Competitivo",
+      "bandera": "pistas/bandera_competicion.png",
+      "descripcion_corta": "Dise√±adas para carreras y competiciones oficiales, estas pistas cumplen con est√°ndares espec√≠ficos de inclinaci√≥n, longitud y condiciones de seguridad. Solo accesibles en ciertos eventos o bajo supervisi√≥n.",
+      "descripcion_larga": "Las pistas de competici√≥n est√°n dise√±adas para eventos y carreras oficiales, cumpliendo con est√°ndares internacionales de inclinaci√≥n, longitud, y medidas de seguridad. Estas pistas no suelen estar abiertas al p√∫blico en general y son accesibles solo durante competiciones o bajo supervisi√≥n. Dise√±adas para maximizar la velocidad y precisi√≥n en el descenso, presentan secciones espec√≠ficas como puertas de eslalon y zonas de cronometraje, donde los esquiadores profesionales ponen a prueba sus habilidades en condiciones altamente exigentes."
+    }
   }
-},
-{
-  "model": "appSkiStick.tipodepista",
-  "pk": 2,
-  "fields": {
-    "nombre": "azul",
-    "nivel": "Amateur",
-    "bandera": "pistas/bandera_azul.png",
-    "descripcion_corta": "Pistas de nivel intermedio, perfectas para quienes ya dominan lo b·sico. Tienen una pendiente moderada, lo que permite disfrutar de mayor velocidad sin grandes dificultades.",
-    "descripcion_larga": "Las pistas azules representan el siguiente nivel de dificultad y son ideales para esquiadores que ya dominan lo b·sico y quieren experimentar una mayor velocidad y desafÌos. Estas pistas tienen una pendiente moderada y permiten a los esquiadores intermedios mejorar su tÈcnica de giro y control. A menudo ofrecen mayor variedad en su trazado, con curvas y secciones algo m·s empinadas, manteniÈndose accesibles para quienes buscan progresar sin encontrarse con descensos extremos."
-  }
-},
-{
-  "model": "appSkiStick.tipodepista",
-  "pk": 3,
-  "fields": {
-    "nombre": "roja",
-    "nivel": "Avanzado",
-    "bandera": "pistas/bandera_roja.png",
-    "descripcion_corta": "Pistas de nivel avanzado. Su inclinaciÛn es mayor y requieren habilidad para manejar la velocidad y giros. Ideales para esquiadores con buena tÈcnica que buscan un reto adicional.",
-    "descripcion_larga": "Las pistas rojas est·n diseÒadas para esquiadores avanzados que se sienten cÛmodos en condiciones de pendiente m·s pronunciada y son capaces de maniobrar a mayor velocidad. Estas pistas presentan desafÌos adicionales, como giros m·s cerrados y secciones con mayor inclinaciÛn, que requieren una buena tÈcnica de frenado y control. Las pistas rojas ofrecen una experiencia emocionante y din·mica y permiten a los esquiadores perfeccionar su estilo en terrenos variados y m·s complejos."
-  }
-},
-{
-  "model": "appSkiStick.tipodepista",
-  "pk": 4,
-  "fields": {
-    "nombre": "negra",
-    "nivel": "Experto",
-    "bandera": "pistas/bandera_negra.png",
-    "descripcion_corta": "Pistas de m·xima dificultad. Son empinadas, estrechas o presentan condiciones complejas. Reservadas para expertos debido a su exigencia tÈcnica.",
-    "descripcion_larga": "Las pistas negras son las m·s difÌciles y est·n reservadas para esquiadores expertos con una gran habilidad tÈcnica y experiencia en la montaÒa. Suelen ser las m·s empinadas y pueden incluir condiciones complicadas, como nieve dura, desniveles y tramos estrechos. Estas pistas requieren un control preciso de la velocidad y las tÈcnicas de giro, asÌ como resistencia fÌsica. En muchos casos, las pistas negras tambiÈn est·n en ·reas menos acondicionadas, ofreciendo un terreno m·s salvaje y desafiante, donde se requiere experiencia y confianza para descender de forma segura."
-  }
-},
-{
-  "model": "appSkiStick.tipodepista",
-  "pk": 5,
-  "fields": {
-    "nombre": "competicion",
-    "nivel": "Competitivo",
-    "bandera": "pistas/bandera_competicion.png",
-    "descripcion_corta": "DiseÒadas para carreras y competiciones oficiales, estas pistas cumplen con est·ndares especÌficos de inclinaciÛn, longitud y condiciones de seguridad. Solo accesibles en ciertos eventos o bajo supervisiÛn.",
-    "descripcion_larga": "Las pistas de competiciÛn est·n diseÒadas para eventos y carreras oficiales, cumpliendo con est·ndares internacionales de inclinaciÛn, longitud, y medidas de seguridad. Estas pistas no suelen estar abiertas al p˙blico en general y son accesibles solo durante competiciones o bajo supervisiÛn. DiseÒadas para maximizar la velocidad y precisiÛn en el descenso, presentan secciones especÌficas como puertas de eslalon y zonas de cronometraje, donde los esquiadores profesionales ponen a prueba sus habilidades en condiciones altamente exigentes."
-  }
-}
 ]

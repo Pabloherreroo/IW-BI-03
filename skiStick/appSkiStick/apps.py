@@ -1,5 +1,7 @@
 from django.apps import AppConfig
 from django.db.models.signals import post_migrate
+from django.core.management import call_command
+
 
 class AppSkiStickConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
@@ -36,3 +38,25 @@ class AppSkiStickConfig(AppConfig):
                 )
                 group.permissions.add(permission)
 
+# def load_fixtures(sender, **kwargs):
+#     fixtures = [
+#         'localizacion.json',
+#         'tipodepista.json',
+#         'estacion.json',
+#         'estaciontipodepista.json'
+#     ]
+#     try:
+#         # Importar modelos necesarios
+#         from appSkiStick.models import Localizacion, TipoDePista, Estacion, EstacionTipoDePista
+
+#         # Limpiar datos existentes (una sola vez)
+#         Localizacion.objects.all().delete()
+#         TipoDePista.objects.all().delete()
+#         Estacion.objects.all().delete()
+#         EstacionTipoDePista.objects.all().delete()
+
+#         # Cargar fixtures en el orden correcto
+#         for fixture in fixtures:
+#             call_command('loaddata', f'appSkiStick/fixtures/{fixture}')
+#     except Exception as e:
+#         print(f"Error loading fixtures: {e}")

@@ -1,79 +1,80 @@
 [
-{
-  "model": "appSkiStick.localizacion",
-  "pk": 1,
-  "fields": {
-    "nombre": "Sistema PenibÈtico",
-    "descripcion": "El Sistema PenibÈtico se encuentra en el sur de EspaÒa, principalmente en las provincias de Granada, AlmerÌa, y M·laga. Es famoso por la estaciÛn de esquÌ de Sierra Nevada y por su proximidad a la Alhambra y la Costa Tropical. Se puede acceder desde Granada y AlmerÌa a travÈs de trenes, autobuses y carreteras nacionales.",
-    "latitud": 37.089,
-    "longitud": -3.605,
-    "imagen": "localizacion/penibÈtico_ca3PTxR.jpg"
+  {
+    "model": "appSkiStick.localizacion",
+    "pk": 1,
+    "fields": {
+      "nombre": "Sistema Penib√©tico",
+      "descripcion": "El Sistema Penib√©tico se encuentra en el sur de Espa√±a, principalmente en las provincias de Granada, Almer√≠a, y M√°laga. Es famoso por la estaci√≥n de esqu√≠ de Sierra Nevada y por su proximidad a la Alhambra y la Costa Tropical. Se puede acceder desde Granada y Almer√≠a a trav√©s de trenes, autobuses y carreteras nacionales.",
+      "latitud": 37.089,
+      "longitud": -3.605,
+      "imagen": "localizacion/penibetico_ca3PTxR.jpg"
+    }
+  },
+  {
+    "model": "appSkiStick.localizacion",
+    "pk": 2,
+    "fields": {
+      "nombre": "Pirineo Catal√°n",
+      "descripcion": "El Pirineo Catal√°n est√° ubicado en el noreste de Catalu√±a, abarcando las provincias de Lleida y Girona. Ofrece paisajes alpinos espectaculares, con destinos destacados como el Valle de Ar√°n y estaciones de esqu√≠ como Baqueira Beret. La regi√≥n est√° bien conectada con Lleida y Barcelona a trav√©s de trenes de alta velocidad y autobuses.",
+      "latitud": 42.43,
+      "longitud": 1.58,
+      "imagen": "localizacion/catalan_C569vYO.jpg"
+    }
+  },
+  {
+    "model": "appSkiStick.localizacion",
+    "pk": 3,
+    "fields": {
+      "nombre": "Pirineo Aragon√©s",
+      "descripcion": "El Pirineo Aragon√©s se encuentra en el norte de Arag√≥n, abarcando Huesca y otras √°reas vecinas. Es el hogar del Parque Nacional de Ordesa y Monte Perdido, ideal para actividades como senderismo, escalada y deportes de invierno. Es accesible desde Huesca o Zaragoza mediante trenes y autobuses, adem√°s de una buena red de carreteras regionales.",
+      "latitud": 42.6,
+      "longitud": -0.54,
+      "imagen": "localizacion/aragones_uRUsiPn.jpg"
+    }
+  },
+  {
+    "model": "appSkiStick.localizacion",
+    "pk": 4,
+    "fields": {
+      "nombre": "Andorra",
+      "descripcion": "Andorra es un peque√±o pa√≠s independiente situado en los Pirineos, entre Espa√±a y Francia. Es conocido por sus estaciones de esqu√≠ como Grandvalira y Vallnord, adem√°s de su atractivo comercio libre de impuestos. El acceso al pa√≠s se realiza principalmente por carretera desde Espa√±a y Francia, con conexiones de transporte cercanas en las ciudades de Barcelona y Toulouse.",
+      "latitud": 42.51,
+      "longitud": 1.52,
+      "imagen": "localizacion/andorra_fUOPY7w.jpg"
+    }
+  },
+  {
+    "model": "appSkiStick.localizacion",
+    "pk": 5,
+    "fields": {
+      "nombre": "Cordillera Cant√°brica",
+      "descripcion": "La Cordillera Cant√°brica est√° ubicada en el norte de Espa√±a y abarca Asturias, Cantabria, y parte de Le√≥n y Galicia. Es reconocida por sus paisajes verdes, la emblem√°tica Ruta del Cares, y los Picos de Europa, una de las principales √°reas protegidas de Espa√±a. Est√° bien conectada por tren y autobuses desde Oviedo, Le√≥n y Santander, adem√°s de carreteras nacionales.",
+      "latitud": 43.27,
+      "longitud": -5.83,
+      "imagen": "localizacion/cantabrico_VPol3i3.jpg"
+    }
+  },
+  {
+    "model": "appSkiStick.localizacion",
+    "pk": 6,
+    "fields": {
+      "nombre": "Sistema Ib√©rico",
+      "descripcion": "El Sistema Ib√©rico se extiende por las comunidades de Arag√≥n, Castilla-La Mancha, Castilla y Le√≥n, y la Comunidad Valenciana. Destaca por sus formaciones geol√≥gicas √∫nicas, como el Parque Natural del Monasterio de Piedra, y su oferta de deportes de monta√±a. La regi√≥n est√° conectada por carreteras regionales y v√≠as de tren, con estaciones principales en Teruel y Cuenca.",
+      "latitud": 40.6,
+      "longitud": -1.33,
+      "imagen": "localizacion/iberico_wGuySoF.jpg"
+    }
+  },
+  {
+    "model": "appSkiStick.localizacion",
+    "pk": 7,
+    "fields": {
+      "nombre": "Sierra de Guadarrama",
+      "descripcion": "La Sierra de Guadarrama est√° situada en el centro de la pen√≠nsula ib√©rica, entre las provincias de Madrid y Segovia. Es famosa por sus paisajes monta√±osos, rutas de senderismo, y el Parque Nacional de la Sierra de Guadarrama, que alberga una rica biodiversidad. La regi√≥n es accesible desde Madrid a trav√©s de trenes de cercan√≠as, autobuses interurbanos, y carreteras como la A-6.",
+      "latitud": 40.77,
+      "longitud": -4.08,
+      "imagen": "localizacion/guadarrama_Rhe1Eex.jpg"
+    }
   }
-},
-{
-  "model": "appSkiStick.localizacion",
-  "pk": 2,
-  "fields": {
-    "nombre": "Pirineo Catal·n",
-    "descripcion": "El Pirineo Catal·n est· ubicado en el noreste de CataluÒa, abarcando las provincias de Lleida y Girona. Ofrece paisajes alpinos espectaculares, con destinos destacados como el Valle de Ar·n y estaciones de esquÌ como Baqueira Beret. La regiÛn est· bien conectada con Lleida y Barcelona a travÈs de trenes de alta velocidad y autobuses.",
-    "latitud": 42.43,
-    "longitud": 1.58,
-    "imagen": "localizacion/catalan_C569vYO.jpg"
-  }
-},
-{
-  "model": "appSkiStick.localizacion",
-  "pk": 3,
-  "fields": {
-    "nombre": "Pirineo AragonÈs",
-    "descripcion": "El Pirineo AragonÈs se encuentra en el norte de AragÛn, abarcando Huesca y otras ·reas vecinas. Es el hogar del Parque Nacional de Ordesa y Monte Perdido, ideal para actividades como senderismo, escalada y deportes de invierno. Es accesible desde Huesca o Zaragoza mediante trenes y autobuses, adem·s de una buena red de carreteras regionales.",
-    "latitud": 42.6,
-    "longitud": -0.54,
-    "imagen": "localizacion/aragones_uRUsiPn.jpg"
-  }
-},
-{
-  "model": "appSkiStick.localizacion",
-  "pk": 4,
-  "fields": {
-    "nombre": "Andorra",
-    "descripcion": "Andorra es un pequeÒo paÌs independiente situado en los Pirineos, entre EspaÒa y Francia. Es conocido por sus estaciones de esquÌ como Grandvalira y Vallnord, adem·s de su atractivo comercio libre de impuestos. El acceso al paÌs se realiza principalmente por carretera desde EspaÒa y Francia, con conexiones de transporte cercanas en las ciudades de Barcelona y Toulouse.",
-    "latitud": 42.51,
-    "longitud": 1.52,
-    "imagen": "localizacion/andorra_fUOPY7w.jpg"
-  }
-},
-{
-  "model": "appSkiStick.localizacion",
-  "pk": 5,
-  "fields": {
-    "nombre": "Cordillera Cant·brica",
-    "descripcion": "La Cordillera Cant·brica est· ubicada en el norte de EspaÒa y abarca Asturias, Cantabria, y parte de LeÛn y Galicia. Es reconocida por sus paisajes verdes, la emblem·tica Ruta del Cares, y los Picos de Europa, una de las principales ·reas protegidas de EspaÒa. Est· bien conectada por tren y autobuses desde Oviedo, LeÛn y Santander, adem·s de carreteras nacionales.",
-    "latitud": 43.27,
-    "longitud": -5.83,
-    "imagen": "localizacion/cantabrico_VPol3i3.jpg"
-  }
-},
-{
-  "model": "appSkiStick.localizacion",
-  "pk": 6,
-  "fields": {
-    "nombre": "Sistema IbÈrico",
-    "descripcion": "El Sistema IbÈrico se extiende por las comunidades de AragÛn, Castilla-La Mancha, Castilla y LeÛn, y la Comunidad Valenciana. Destaca por sus formaciones geolÛgicas ˙nicas, como el Parque Natural del Monasterio de Piedra, y su oferta de deportes de montaÒa. La regiÛn est· conectada por carreteras regionales y vÌas de tren, con estaciones principales en Teruel y Cuenca.",
-    "latitud": 40.6,
-    "longitud": -1.33,
-    "imagen": "localizacion/iberico_wGuySoF.jpg"
-  }
-},
-{
-  "model": "appSkiStick.localizacion",
-  "pk": 7,
-  "fields": {
-    "nombre": "Sierra de Guadarrama",
-    "descripcion": "La Sierra de Guadarrama est· situada en el centro de la penÌnsula ibÈrica, entre las provincias de Madrid y Segovia. Es famosa por sus paisajes montaÒosos, rutas de senderismo, y el Parque Nacional de la Sierra de Guadarrama, que alberga una rica biodiversidad. La regiÛn es accesible desde Madrid a travÈs de trenes de cercanÌas, autobuses interurbanos, y carreteras como la A-6.",
-    "latitud": 40.77,
-    "longitud": -4.08,
-    "imagen": "localizacion/guadarrama_Rhe1Eex.jpg"
-  }
-}
 ]
+
