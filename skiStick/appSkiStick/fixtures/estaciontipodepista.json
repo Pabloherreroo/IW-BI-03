@@ -1,0 +1,470 @@
+[
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 1,
+  "fields": {
+    "estacion": 1,
+    "tipo_de_pista": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 2,
+  "fields": {
+    "estacion": 1,
+    "tipo_de_pista": 2,
+    "cantidad": 42
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 3,
+  "fields": {
+    "estacion": 1,
+    "tipo_de_pista": 3,
+    "cantidad": 55
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 4,
+  "fields": {
+    "estacion": 1,
+    "tipo_de_pista": 4,
+    "cantidad": 7
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 5,
+  "fields": {
+    "estacion": 1,
+    "tipo_de_pista": 5,
+    "cantidad": 1
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 6,
+  "fields": {
+    "estacion": 2,
+    "tipo_de_pista": 1,
+    "cantidad": 6
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 7,
+  "fields": {
+    "estacion": 2,
+    "tipo_de_pista": 2,
+    "cantidad": 43
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 8,
+  "fields": {
+    "estacion": 2,
+    "tipo_de_pista": 3,
+    "cantidad": 46
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 9,
+  "fields": {
+    "estacion": 2,
+    "tipo_de_pista": 4,
+    "cantidad": 17
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 10,
+  "fields": {
+    "estacion": 3,
+    "tipo_de_pista": 1,
+    "cantidad": 11
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 11,
+  "fields": {
+    "estacion": 3,
+    "tipo_de_pista": 2,
+    "cantidad": 38
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 12,
+  "fields": {
+    "estacion": 3,
+    "tipo_de_pista": 3,
+    "cantidad": 54
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 13,
+  "fields": {
+    "estacion": 3,
+    "tipo_de_pista": 4,
+    "cantidad": 41
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 14,
+  "fields": {
+    "estacion": 3,
+    "tipo_de_pista": 5,
+    "cantidad": 5
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 15,
+  "fields": {
+    "estacion": 4,
+    "tipo_de_pista": 1,
+    "cantidad": 7
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 16,
+  "fields": {
+    "estacion": 4,
+    "tipo_de_pista": 2,
+    "cantidad": 17
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 17,
+  "fields": {
+    "estacion": 4,
+    "tipo_de_pista": 3,
+    "cantidad": 26
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 18,
+  "fields": {
+    "estacion": 4,
+    "tipo_de_pista": 4,
+    "cantidad": 15
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 19,
+  "fields": {
+    "estacion": 5,
+    "tipo_de_pista": 1,
+    "cantidad": 5
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 20,
+  "fields": {
+    "estacion": 5,
+    "tipo_de_pista": 2,
+    "cantidad": 18
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 21,
+  "fields": {
+    "estacion": 5,
+    "tipo_de_pista": 3,
+    "cantidad": 22
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 22,
+  "fields": {
+    "estacion": 5,
+    "tipo_de_pista": 4,
+    "cantidad": 6
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 23,
+  "fields": {
+    "estacion": 6,
+    "tipo_de_pista": 1,
+    "cantidad": 19
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 24,
+  "fields": {
+    "estacion": 6,
+    "tipo_de_pista": 2,
+    "cantidad": 49
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 25,
+  "fields": {
+    "estacion": 6,
+    "tipo_de_pista": 3,
+    "cantidad": 41
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 26,
+  "fields": {
+    "estacion": 6,
+    "tipo_de_pista": 4,
+    "cantidad": 19
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 27,
+  "fields": {
+    "estacion": 6,
+    "tipo_de_pista": 5,
+    "cantidad": 3
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 28,
+  "fields": {
+    "estacion": 7,
+    "tipo_de_pista": 1,
+    "cantidad": 7
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 29,
+  "fields": {
+    "estacion": 7,
+    "tipo_de_pista": 2,
+    "cantidad": 18
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 30,
+  "fields": {
+    "estacion": 7,
+    "tipo_de_pista": 3,
+    "cantidad": 17
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 31,
+  "fields": {
+    "estacion": 7,
+    "tipo_de_pista": 4,
+    "cantidad": 4
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 32,
+  "fields": {
+    "estacion": 7,
+    "tipo_de_pista": 5,
+    "cantidad": 6
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 33,
+  "fields": {
+    "estacion": 8,
+    "tipo_de_pista": 1,
+    "cantidad": 22
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 34,
+  "fields": {
+    "estacion": 8,
+    "tipo_de_pista": 2,
+    "cantidad": 41
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 35,
+  "fields": {
+    "estacion": 8,
+    "tipo_de_pista": 3,
+    "cantidad": 40
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 36,
+  "fields": {
+    "estacion": 8,
+    "tipo_de_pista": 4,
+    "cantidad": 16
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 37,
+  "fields": {
+    "estacion": 8,
+    "tipo_de_pista": 5,
+    "cantidad": 5
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 38,
+  "fields": {
+    "estacion": 9,
+    "tipo_de_pista": 1,
+    "cantidad": 10
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 39,
+  "fields": {
+    "estacion": 9,
+    "tipo_de_pista": 2,
+    "cantidad": 12
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 40,
+  "fields": {
+    "estacion": 9,
+    "tipo_de_pista": 3,
+    "cantidad": 16
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 41,
+  "fields": {
+    "estacion": 9,
+    "tipo_de_pista": 4,
+    "cantidad": 13
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 42,
+  "fields": {
+    "estacion": 9,
+    "tipo_de_pista": 5,
+    "cantidad": 1
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 43,
+  "fields": {
+    "estacion": 10,
+    "tipo_de_pista": 1,
+    "cantidad": 4
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 44,
+  "fields": {
+    "estacion": 10,
+    "tipo_de_pista": 2,
+    "cantidad": 9
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 45,
+  "fields": {
+    "estacion": 10,
+    "tipo_de_pista": 3,
+    "cantidad": 10
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 46,
+  "fields": {
+    "estacion": 11,
+    "tipo_de_pista": 1,
+    "cantidad": 6
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 47,
+  "fields": {
+    "estacion": 11,
+    "tipo_de_pista": 2,
+    "cantidad": 6
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 48,
+  "fields": {
+    "estacion": 11,
+    "tipo_de_pista": 3,
+    "cantidad": 10
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 49,
+  "fields": {
+    "estacion": 11,
+    "tipo_de_pista": 4,
+    "cantidad": 2
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 50,
+  "fields": {
+    "estacion": 12,
+    "tipo_de_pista": 1,
+    "cantidad": 12
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 51,
+  "fields": {
+    "estacion": 12,
+    "tipo_de_pista": 2,
+    "cantidad": 14
+  }
+},
+{
+  "model": "appSkiStick.estaciontipodepista",
+  "pk": 52,
+  "fields": {
+    "estacion": 12,
+    "tipo_de_pista": 3,
+    "cantidad": 3
+  }
+}
+]

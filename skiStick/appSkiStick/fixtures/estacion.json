@@ -1,0 +1,146 @@
+[
+{
+  "model": "appSkiStick.estacion",
+  "pk": 1,
+  "fields": {
+    "nombre": "Sierra Nevada",
+    "localizacion": 1,
+    "km_pistas": "110.00",
+    "descripcion": "La estación de esquí más al sur de Europa, Sierra Nevada ofrece una combinación única de nieve y sol con vistas al mar Mediterráneo en días claros. Tiene un gran número de actividades y servicios para todos los niveles.",
+    "imagen": "estaciones/sierra_nevada.webp",
+    "imagen_plano": "estaciones/sierra_nevada_plano.webp"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 2,
+  "fields": {
+    "nombre": "Baqueira Beret",
+    "localizacion": 2,
+    "km_pistas": "165.00",
+    "descripcion": "Situada en la Val d'Aran, en la provincia de Lleida, Baqueira Beret es una de las estaciones más prestigiosas de España, reconocida por la alta calidad de sus pistas y su entorno natural impresionante.",
+    "imagen": "estaciones/baqueira.webp",
+    "imagen_plano": "estaciones/baqueira_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 3,
+  "fields": {
+    "nombre": "Formigal-Panticosa",
+    "localizacion": 3,
+    "km_pistas": "180.00",
+    "descripcion": "Ubicada en Huesca, esta estación es la más grande de España, ofreciendo una amplia variedad de pistas para todos los niveles y un ambiente animado tanto de día como de noche.",
+    "imagen": "estaciones/formigal.webp",
+    "imagen_plano": "estaciones/formigal_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 4,
+  "fields": {
+    "nombre": "Cerler",
+    "localizacion": 3,
+    "km_pistas": "79.00",
+    "descripcion": "Ubicada en el Valle de Benasque, Cerler ofrece el mayor desnivel esquiable de los Pirineos y una de las pistas más largas de España, conocida como \"9 km\".",
+    "imagen": "estaciones/cerler.webp",
+    "imagen_plano": "estaciones/cerler_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 5,
+  "fields": {
+    "nombre": "Astún",
+    "localizacion": 3,
+    "km_pistas": "50.00",
+    "descripcion": "Situada en el Valle de Canfranc, Astún es conocida por su ambiente familiar y sus pistas variadas que se adaptan a todos los niveles de esquiadores.",
+    "imagen": "estaciones/astun.webp",
+    "imagen_plano": "estaciones/astun_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 6,
+  "fields": {
+    "nombre": "Grandvalira",
+    "localizacion": 4,
+    "km_pistas": "210.00",
+    "descripcion": "Grandvalira es la estación de esquí más grande de los Pirineos y una de las más extensas de Europa. Ofrece una amplia variedad de pistas y servicios alrededor de varios valles, atrayendo a esquiadores de todos los niveles.",
+    "imagen": "estaciones/grandvalira.jpg",
+    "imagen_plano": "estaciones/grandvalira_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 7,
+  "fields": {
+    "nombre": "Vallnord - Pal Arinsal",
+    "localizacion": 4,
+    "km_pistas": "63.00",
+    "descripcion": "Vallnord - Pal Arinsal es una estación ideal para familias y esquiadores de nivel intermedio, ofreciendo una variedad de pistas y actividades complementarias en un entorno natural impresionante.",
+    "imagen": "estaciones/vallnord.webp",
+    "imagen_plano": "estaciones/vallnord_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 8,
+  "fields": {
+    "nombre": "La Molina + Masella (Alp 2500)",
+    "localizacion": 2,
+    "km_pistas": "145.00",
+    "descripcion": "La combinación de La Molina y Masella forma uno de los dominios esquiables más grandes de los Pirineos, situado en la zona catalana.",
+    "imagen": "estaciones/alp_2500.jpg",
+    "imagen_plano": "estaciones/alp_2500_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 9,
+  "fields": {
+    "nombre": "Candanchú",
+    "localizacion": 3,
+    "km_pistas": "50.50",
+    "descripcion": "Candanchú es una de las estaciones más antiguas de España, conocida por la calidad de sus pistas y su entorno natural. Ofrece una variedad de pistas que se adaptan a todos los niveles de esquiadores.",
+    "imagen": "estaciones/candanchu.webp",
+    "imagen_plano": "estaciones/candanchu_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 10,
+  "fields": {
+    "nombre": "Alto Campoo",
+    "localizacion": 5,
+    "km_pistas": "28.00",
+    "descripcion": "Situada en la comarca de Campoo, Alto Campoo es una de las principales estaciones de la Cordillera Cantábrica, aunque más pequeña que las del Pirineo.",
+    "imagen": "estaciones/alto_campoo.webp",
+    "imagen_plano": "estaciones/alto_campoo_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 11,
+  "fields": {
+    "nombre": "Valdezcaray",
+    "localizacion": 6,
+    "km_pistas": "22.00",
+    "descripcion": "Ubicada en la Sierra de la Demanda, Valdezcaray es la principal estación de esquí de La Rioja, ofreciendo una variedad de pistas y servicios en un entorno natural privilegiado.",
+    "imagen": "estaciones/valdezcaray.jpg",
+    "imagen_plano": "estaciones/valdezcaray_plano.jpg"
+  }
+},
+{
+  "model": "appSkiStick.estacion",
+  "pk": 12,
+  "fields": {
+    "nombre": "Valdesquí",
+    "localizacion": 7,
+    "km_pistas": "22.00",
+    "descripcion": "Situada en la Sierra de Guadarrama, Valdesquí es la principal estación de esquí de la Comunidad de Madrid, siendo con diferencia la más accesible para los esquiadores de la capital.",
+    "imagen": "estaciones/valdesqui.jpg",
+    "imagen_plano": "estaciones/valdesqui_plano.webp"
+  }
+}
+]

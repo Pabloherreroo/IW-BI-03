@@ -1,0 +1,79 @@
+[
+{
+  "model": "appSkiStick.localizacion",
+  "pk": 1,
+  "fields": {
+    "nombre": "Sistema Penibético",
+    "descripcion": "El Sistema Penibético se encuentra en el sur de España, principalmente en las provincias de Granada, Almería, y Málaga. Es famoso por la estación de esquí de Sierra Nevada y por su proximidad a la Alhambra y la Costa Tropical. Se puede acceder desde Granada y Almería a través de trenes, autobuses y carreteras nacionales.",
+    "latitud": 37.089,
+    "longitud": -3.605,
+    "imagen": "localizacion/penibético_ca3PTxR.jpg"
+  }
+},
+{
+  "model": "appSkiStick.localizacion",
+  "pk": 2,
+  "fields": {
+    "nombre": "Pirineo Catalán",
+    "descripcion": "El Pirineo Catalán está ubicado en el noreste de Cataluña, abarcando las provincias de Lleida y Girona. Ofrece paisajes alpinos espectaculares, con destinos destacados como el Valle de Arán y estaciones de esquí como Baqueira Beret. La región está bien conectada con Lleida y Barcelona a través de trenes de alta velocidad y autobuses.",
+    "latitud": 42.43,
+    "longitud": 1.58,
+    "imagen": "localizacion/catalan_C569vYO.jpg"
+  }
+},
+{
+  "model": "appSkiStick.localizacion",
+  "pk": 3,
+  "fields": {
+    "nombre": "Pirineo Aragonés",
+    "descripcion": "El Pirineo Aragonés se encuentra en el norte de Aragón, abarcando Huesca y otras áreas vecinas. Es el hogar del Parque Nacional de Ordesa y Monte Perdido, ideal para actividades como senderismo, escalada y deportes de invierno. Es accesible desde Huesca o Zaragoza mediante trenes y autobuses, además de una buena red de carreteras regionales.",
+    "latitud": 42.6,
+    "longitud": -0.54,
+    "imagen": "localizacion/aragones_uRUsiPn.jpg"
+  }
+},
+{
+  "model": "appSkiStick.localizacion",
+  "pk": 4,
+  "fields": {
+    "nombre": "Andorra",
+    "descripcion": "Andorra es un pequeño país independiente situado en los Pirineos, entre España y Francia. Es conocido por sus estaciones de esquí como Grandvalira y Vallnord, además de su atractivo comercio libre de impuestos. El acceso al país se realiza principalmente por carretera desde España y Francia, con conexiones de transporte cercanas en las ciudades de Barcelona y Toulouse.",
+    "latitud": 42.51,
+    "longitud": 1.52,
+    "imagen": "localizacion/andorra_fUOPY7w.jpg"
+  }
+},
+{
+  "model": "appSkiStick.localizacion",
+  "pk": 5,
+  "fields": {
+    "nombre": "Cordillera Cantábrica",
+    "descripcion": "La Cordillera Cantábrica está ubicada en el norte de España y abarca Asturias, Cantabria, y parte de León y Galicia. Es reconocida por sus paisajes verdes, la emblemática Ruta del Cares, y los Picos de Europa, una de las principales áreas protegidas de España. Está bien conectada por tren y autobuses desde Oviedo, León y Santander, además de carreteras nacionales.",
+    "latitud": 43.27,
+    "longitud": -5.83,
+    "imagen": "localizacion/cantabrico_VPol3i3.jpg"
+  }
+},
+{
+  "model": "appSkiStick.localizacion",
+  "pk": 6,
+  "fields": {
+    "nombre": "Sistema Ibérico",
+    "descripcion": "El Sistema Ibérico se extiende por las comunidades de Aragón, Castilla-La Mancha, Castilla y León, y la Comunidad Valenciana. Destaca por sus formaciones geológicas únicas, como el Parque Natural del Monasterio de Piedra, y su oferta de deportes de montaña. La región está conectada por carreteras regionales y vías de tren, con estaciones principales en Teruel y Cuenca.",
+    "latitud": 40.6,
+    "longitud": -1.33,
+    "imagen": "localizacion/iberico_wGuySoF.jpg"
+  }
+},
+{
+  "model": "appSkiStick.localizacion",
+  "pk": 7,
+  "fields": {
+    "nombre": "Sierra de Guadarrama",
+    "descripcion": "La Sierra de Guadarrama está situada en el centro de la península ibérica, entre las provincias de Madrid y Segovia. Es famosa por sus paisajes montañosos, rutas de senderismo, y el Parque Nacional de la Sierra de Guadarrama, que alberga una rica biodiversidad. La región es accesible desde Madrid a través de trenes de cercanías, autobuses interurbanos, y carreteras como la A-6.",
+    "latitud": 40.77,
+    "longitud": -4.08,
+    "imagen": "localizacion/guadarrama_Rhe1Eex.jpg"
+  }
+}
+]
