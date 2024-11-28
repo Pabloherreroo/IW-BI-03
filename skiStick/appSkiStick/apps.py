@@ -8,8 +8,9 @@ class AppSkiStickConfig(AppConfig):
     name = "appSkiStick"
 
     def ready(self):
-        # Conectar la señal post_migrate para crear roles después de la migración
+        # Conectar la señal post_migrate para crear roles y para popular la BD con los json después de la migración
         post_migrate.connect(self.create_roles, sender=self)
+        post_migrate.connect(load_fixtures, sender=self)
 
     def create_roles(self, **kwargs):
         from django.contrib.auth.models import Group, Permission
@@ -38,25 +39,25 @@ class AppSkiStickConfig(AppConfig):
                 )
                 group.permissions.add(permission)
 
-# def load_fixtures(sender, **kwargs):
-#     fixtures = [
-#         'localizacion.json',
-#         'tipodepista.json',
-#         'estacion.json',
-#         'estaciontipodepista.json'
-#     ]
-#     try:
-#         # Importar modelos necesarios
-#         from appSkiStick.models import Localizacion, TipoDePista, Estacion, EstacionTipoDePista
+def load_fixtures(sender, **kwargs):
+    fixtures = [
+        'localizacion.json',
+        'tipodepista.json',
+        'estacion.json',
+        'estaciontipodepista.json'
+    ]
+    try:
+        # Importar modelos necesarios
+        from appSkiStick.models import Localizacion, TipoDePista, Estacion, EstacionTipoDePista
 
-#         # Limpiar datos existentes (una sola vez)
-#         Localizacion.objects.all().delete()
-#         TipoDePista.objects.all().delete()
-#         Estacion.objects.all().delete()
-#         EstacionTipoDePista.objects.all().delete()
+        # Limpiar datos existentes (una sola vez)
+        Localizacion.objects.all().delete()
+        TipoDePista.objects.all().delete()
+        Estacion.objects.all().delete()
+        EstacionTipoDePista.objects.all().delete()
 
-#         # Cargar fixtures en el orden correcto
-#         for fixture in fixtures:
-#             call_command('loaddata', f'appSkiStick/fixtures/{fixture}')
-#     except Exception as e:
-#         print(f"Error loading fixtures: {e}")
+        # Cargar fixtures en el orden correcto
+        for fixture in fixtures:
+            call_command('loaddata', f'appSkiStick/fixtures/{fixture}')
+    except Exception as e:
+        print(f"Error loading fixtures: {e}")
