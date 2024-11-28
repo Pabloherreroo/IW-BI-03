@@ -136,7 +136,8 @@ MIDDLEWARE.insert(2, 'django.middleware.locale.LocaleMiddleware')
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, "static"),
+    BASE_DIR / "static",
+    BASE_DIR / "appSkiStick" / "static", 
 ]
 
 

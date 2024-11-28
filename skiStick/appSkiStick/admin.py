@@ -23,6 +23,10 @@ class EstacionAdmin(admin.ModelAdmin):
     def has_module_permission(self, request):
         return self.has_view_permission(request)
 
+    class Media:
+        css = {
+            'all': ('admin/css/admin.css',) 
+        }
 
 class TipoDePistaAdmin(admin.ModelAdmin):
     def has_view_permission(self, request, obj=None):
@@ -37,6 +41,11 @@ class TipoDePistaAdmin(admin.ModelAdmin):
 
     def has_module_permission(self, request):
         return self.has_view_permission(request)
+
+    class Media:
+        css = {
+            'all': ('admin/css/admin.css',)
+        }
 
 class CustomAdminSite(AdminSite):
     site_header = "SkiStick Admin"
