@@ -1,28 +1,32 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <div class="estacion-detalle">
-<h1 class="estacion-titulo">{{ estacion.nombre }}</h1>
+    <h1 class="estacion-titulo">{{ estacion.nombre }}</h1>
     <div class="estacion-detalle-info-imagen">
         <div class="estacion-detalle-info">
             <p>{{ estacion.descripcion }}</p>
 
-            <p>Kilómetros esquiables: {{ estacion.km_pistas }} km</p>
+            <p>{% trans "Kilómetros esquiables" %}: {{ estacion.km_pistas }} km</p>
 
-            <h2>Pistas</h2>
+            <h2>{% trans "Pistas" %}</h2>
             <ul>
                 {% for tipo in tipos_con_cantidad %}
-                    <li class="estacion-detalle-pistas">{{ tipo.tipo_de_pista.nombre }}: {{ tipo.cantidad }} pistas</li>
+                    <li class="estacion-detalle-pistas">
+                        {{ tipo.tipo_de_pista.nombre }}: {{ tipo.cantidad }} {% trans "pistas" %}
+                    </li>
                 {% endfor %}
             </ul>
 
             {% if estacion_similar %}
-                <h2>Estación Similar</h2>
+                <h2>{% trans "Estación Similar" %}</h2>
                 <p>
-                    La estación más cercana en kilómetros esquiables es 
-                    <a href="{% url 'estacion_detail' estacion_similar.pk %}">{{ estacion_similar.nombre }}</a>, con {{ estacion_similar.km_pistas }} km esquiables.
+                    {% blocktrans with estacion=estacion_similar.nombre km=estacion_similar.km_pistas %}
+                    La estación más cercana en kilómetros esquiables es {{ estacion }}, con {{ km }} km esquiables.
+                    {% endblocktrans %}
                 </p>
             {% else %}
-                <p>No hay estaciones similares en esta localización.</p>
+                <p>{% trans "No hay estaciones similares en esta localización." %}</p>
             {% endif %}
         </div>
         {% if estacion.imagen %}
@@ -32,12 +36,12 @@
     
     {% if estacion.imagen_plano %}
     <div class="estacion-detalle-info-plano">
-            <h2>Plano de pistas</h2>
-            <p>Haz click en la imagen inferior para ver el plano de esta estación:</p>
+        <h2>{% trans "Plano de pistas" %}</h2>
+        <p>{% trans "Haz click en la imagen inferior para ver el plano de esta estación:" %}</p>
     </div>
     <div class="estacion-detalle-plano">
         <img src="{{ estacion.imagen_plano.url }}" alt="{{ estacion.nombre }} plano" class="estacion-detalle-imagen-plano">
-        <div class="icono-zoom"  onclick="openInNewTab('{{ estacion.imagen_plano.url }}')">🔍</div>
+        <div class="icono-zoom" onclick="openInNewTab('{{ estacion.imagen_plano.url }}')">🔍</div>
     </div>
     <script>
         function openInNewTab(url) {
@@ -47,5 +51,6 @@
     {% endif %}
 </div>
 {% endblock %}
+
 
 

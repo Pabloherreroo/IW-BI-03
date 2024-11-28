@@ -1,29 +1,30 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
-    <h1 class="estaciones-lista-titulo">Lista de Estaciones</h1>
+    <h1 class="estaciones-lista-titulo">{% trans "Lista de Estaciones" %}</h1>
     <div class="estaciones-lista">
         <form method="get" action="{% url 'estacion_list' %}">
-            <label for="localizacion">Localización:</label>
+            <label for="localizacion">{% trans "Localización:" %}</label>
             <select name="localizacion" id="localizacion">
-                <option value="">Todas</option>
+                <option value="">{% trans "Todas" %}</option>
                 {% for localizacion in localizaciones %}
-                    <option value="{{ localizacion.id }}" {% if localizacion.id|stringformat:"s" == request.GET.localizacion %}selected{% endif %}>
+                    <option value="{{ localizacion.id }}" {% if localizacion.id|stringformat:'s' == request.GET.localizacion %}selected{% endif %}>
                         {{ localizacion.nombre }}
                     </option>
                 {% endfor %}
             </select>
         
-            <label for="tipo_de_pista">Tipo de Pista:</label>
+            <label for="tipo_de_pista">{% trans "Tipo de Pista:" %}</label>
             <select name="tipo_de_pista" id="tipo_de_pista">
-                <option value="">Todos</option>
+                <option value="">{% trans "Todos" %}</option>
                 {% for tipo in tipos_de_pista %}
-                    <option value="{{ tipo.id }}" {% if tipo.id|stringformat:"s" == request.GET.tipo_de_pista %}selected{% endif %}>
+                    <option value="{{ tipo.id }}" {% if tipo.id|stringformat:'s' == request.GET.tipo_de_pista %}selected{% endif %}>
                         {{ tipo.nombre }}
                     </option>
                 {% endfor %}
             </select>
         
-            <button type="submit">Filtrar</button>
+            <button type="submit">{% trans "Filtrar" %}</button>
         </form>
         {% for estacion in estaciones %}
             <div class="estacion-item">
@@ -33,12 +34,13 @@
                 
                 <div class="estacion-info">
                     <h2><a href="{% url 'estacion_detail' estacion.pk %}">{{ estacion.nombre }}</a></h2>
-                    <p>Localización: {{ estacion.localizacion }}</p>
-                    <p>Km pistas: {{ estacion.km_pistas }} km</p>
+                    <p>{% trans "Localización:" %} {{ estacion.localizacion }}</p>
+                    <p>{% trans "Km pistas:" %} {{ estacion.km_pistas }} {% trans "km" %}</p>
                 </div>
             </div>
         {% empty %}
-            <p>No se encontraron estaciones con los filtros seleccionados.</p>
+            <p>{% trans "No se encontraron estaciones con los filtros seleccionados." %}</p>
         {% endfor %}
     </div>
 {% endblock %}
+

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
-    <h1 class="pistas-lista-titulo">Tipos de Pista</h1>
+    <h1 class="pistas-lista-titulo">{% trans "Tipos de Pista" %}</h1>
     <div class="pistas-lista-centrar">
         <div class="pistas-lista">
             {% for pista in pistas %}
@@ -20,3 +21,4 @@
         </div>
     </div>
 {% endblock %}
+

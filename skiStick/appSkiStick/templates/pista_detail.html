@@ -1,14 +1,15 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <div class="pista-detalle">
-    <h1 class="pista-titulo"> Pista {{ pista.nombre }}</h1>
+    <h1 class="pista-titulo">{% trans "Pista" %} {{ pista.nombre }}</h1>
         <p>{{ pista.descripcion_larga }}</p>
         {% if pista.nombre == "competicion" %}
-        <h2>Estaciones con pistas de {{ pista.nombre }}</h2>
-        {% elif pista.nombre == "azul"%}
-        <h2>Estaciones con pistas {{ pista.nombre }}es</h2>
+        <h2>{% trans "Estaciones con pistas de" %} {{ pista.nombre }}</h2>
+        {% elif pista.nombre == "azul" %}
+        <h2>{% trans "Estaciones con pistas azules" %}</h2>
         {% else %}
-        <h2>Estaciones con pistas {{ pista.nombre }}s</h2>
+        <h2>{% trans "Estaciones con pistas" %} {{ pista.nombre }}s</h2>
         {% endif %}
         {% for relacion in estaciones_con_cantidad %}
         <div class="pista-estacion">
@@ -17,15 +18,15 @@
             {% endif %}
             <h3><a href="{% url 'estacion_detail' relacion.estacion.pk %}">{{ relacion.estacion }}</a></h3>
             {% if pista.nombre == "competicion" %}
-            <h3>Pistas de {{ pista.nombre }}: {{ relacion.cantidad }}</h3>
-            {% elif pista.nombre == "azul"%}
-            <h3>Pistas {{ pista.nombre }}es: {{ relacion.cantidad }}</h3>
+            <h3>{% trans "Pistas de" %} {{ pista.nombre }}: {{ relacion.cantidad }}</h3>
             {% else %}
-            <h3>Pistas {{ pista.nombre }}s: {{ relacion.cantidad }}</h3>
+            <h3>{% trans "Pistas" %} {{ pista.nombre }}s: {{ relacion.cantidad }}</h3>
             {% endif %}
         </div>
         {% endfor %}
 </div>
 {% endblock %}
+
+
 
 

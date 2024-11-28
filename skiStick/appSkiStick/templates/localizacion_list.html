@@ -1,42 +1,35 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load static %}
-
 {% block content %}
 <div class="localizacion-lista-header">
-    <h1>Mapa de Localizaciones</h1>
-    <p>Un click para conocer un poco las localizaciones</p>
-    <p>Doble click para saber detalles ;)</p>
+    <h1>{% trans "Mapa de Localizaciones" %}</h1>
+    <p>{% trans "Un click para conocer un poco las localizaciones" %}</p>
+    <p>{% trans "Doble click para saber detalles ;" %}</p>
 </div>
     <!-- Contenedor para el mapa -->
     <div id="map" style="height: 500px; width: 100%;"></div>
 
     <!-- Script para inicializar el mapa -->
     <script>
-    // Datos de las localizaciones cargados desde Django
     var localizaciones = JSON.parse('{{ localizaciones_json|safe }}');
-    console.log(localizaciones); // Verifica que los datos se estan cargando correctamente
 
-    // Inicializar el mapa
-    var map = L.map('map').setView([40.416775, -3.703790], 5); // Centrado en Espana
+    var map = L.map('map').setView([40.416775, -3.703790], 5);
 
-    // Agregar la capa base de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
-        attribution: 'Map data  <a href="https://openstreetmap.org">OpenStreetMap contributors</a>'
+        attribution: '{% trans "Map data" %} <a href="https://openstreetmap.org">{% trans "OpenStreetMap contributors" %}</a>'
     }).addTo(map);
 
-    // Agregar marcadores para cada localizacion
     localizaciones.forEach(function (loc) {
         var marker = L.marker([loc.latitud, loc.longitud]).addTo(map)
             .bindPopup(`<strong>${loc.nombre}</strong><br>${loc.descripcion}`);
 
-        // Evento de Double-click para navegar en ventana de detalle
         marker.on('dblclick', function () {
-            console.log(localizaciones);
-            // Navegar a pagina localizacion_detail.html con id
             window.location.href = `/localizacion/${loc.id}/`;
         });
     });
 
     </script>
-    {% endblock %}
+{% endblock %}
+

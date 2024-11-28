@@ -1,10 +1,11 @@
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sitio web de estaciones de esquí en España y Andorra, con información detallada sobre pistas y localizaciones.">
-    <title>Ski Stick</title>
+    <meta name="description" content="{% trans 'Sitio web de estaciones de esquí en España y Andorra, con información detallada sobre pistas y localizaciones.' %}">
+    <title>{% trans 'Ski Stick' %}</title>
     <!--Configuración general para el mapa-->
     <!-- CSS de Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="">
@@ -17,15 +18,29 @@
 </head>
 <body>
     <header>
-        <h1><a href="{% url 'home' %}">Ski Stick</a></h1>
+        <h1><a href="{% url 'home' %}">{% trans 'Ski Stick' %}</a></h1>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'estacion_list' %}">Estaciones</a></li>
-                <li><a href="{% url 'localizacion_list' %}">Localizaciones</a></li>
-                <li><a href="{% url 'pista_list' %}">Tipos de Pista</a></li>
+                <li><a href="{% url 'home' %}">{% trans 'Inicio' %}</a></li>
+                <li><a href="{% url 'estacion_list' %}">{% trans 'Estaciones' %}</a></li>
+                <li><a href="{% url 'localizacion_list' %}">{% trans 'Localizaciones' %}</a></li>
+                <li><a href="{% url 'pista_list' %}">{% trans 'Tipos de Pista' %}</a></li>
             </ul>
         </nav>
+        <!-- Selector de idioma -->
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="language" id="language-hidden" value="{{ LANGUAGE_CODE }}">
+            <select id="language-select" onchange="document.getElementById('language-hidden').value = this.value;">
+                {% for lang in LANGUAGES %}
+                <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected{% endif %}>
+                    {{ lang.1 }}
+                </option>
+                {% endfor %}
+            </select>
+            <button type="submit">{% trans 'Cambiar idioma' %}</button>
+        </form>
+                
     </header>
     
     <main>
@@ -37,3 +52,4 @@
     </footer>
 </body>
 </html>
+

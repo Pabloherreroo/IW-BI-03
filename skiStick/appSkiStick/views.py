@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, TemplateView
 from .models import Estacion, Localizacion, TipoDePista, EstacionTipoDePista
 from django.db.models import F
 from django.db.models.functions import Abs
+from django.conf import settings
 
 
 class HomeView(TemplateView):
@@ -23,6 +24,8 @@ class HomeView(TemplateView):
         }
         context['localizaciones'] = Localizacion.objects.all()
         context['tipos_de_pista'] = TipoDePista.objects.all()
+        context['LANGUAGES'] = settings.LANGUAGES
+        context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
         return context
 
 
@@ -47,6 +50,9 @@ class EstacionDetailView(DetailView):
         ).order_by('diferencia_km').first()  
         context['estacion_similar'] = estacion_similar
 
+        context['LANGUAGES'] = settings.LANGUAGES
+        context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
+
         return context
 
 #Mapa de localizaciones  
@@ -62,6 +68,10 @@ class LocalizacionListView(ListView):
        context['localizaciones_json'] = json.dumps(list(localizaciones))
         # Imprime en el servidor para verificar
        print(context['localizaciones_json'])
+
+       context['LANGUAGES'] = settings.LANGUAGES
+       context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
+       
        return context
 
 # Detalle de una localizacion     
@@ -74,6 +84,8 @@ class LocalizacionDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         # Obtener todas las estaciones asociadas a esta localizacion
         context['estaciones'] = self.object.estaciones.all()
+        context['LANGUAGES'] = settings.LANGUAGES
+        context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
         return context
 
 
@@ -82,6 +94,11 @@ class PistaListView(ListView):
     model = TipoDePista
     template_name = "pista_list.html"
     context_object_name = "pistas"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['LANGUAGES'] = settings.LANGUAGES
+        context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
+        return context
 
 # Detalle de tipo de pista
 class PistaDetailView(DetailView):
@@ -93,6 +110,8 @@ class PistaDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         # Obtener el número de pistas de ese tipo para cada estación
         context['estaciones_con_cantidad'] = EstacionTipoDePista.objects.filter(tipo_de_pista=self.object)
+        context['LANGUAGES'] = settings.LANGUAGES
+        context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
         return context
 
 # Lista de estaciones + filtro por localización y/o tipo de pista
@@ -123,5 +142,7 @@ class EstacionListView(ListView):
         # Agregar localizaciones y tipos de pista al contexto
         context['localizaciones'] = Localizacion.objects.all()
         context['tipos_de_pista'] = TipoDePista.objects.all()
+        context['LANGUAGES'] = settings.LANGUAGES
+        context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
         return context
     

@@ -1,0 +1,372 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-28 11:13+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\appSkiStick\models.py:5 .\appSkiStick\models.py:33
+#: .\appSkiStick\models.py:51
+msgid "Nombre"
+msgstr "Name"
+
+#: .\appSkiStick\models.py:6 .\appSkiStick\models.py:64
+msgid "Descripción"
+msgstr "Description"
+
+#: .\appSkiStick\models.py:7
+msgid "Latitud"
+msgstr "Latitude"
+
+#: .\appSkiStick\models.py:8
+msgid "Longitud"
+msgstr "Longitude"
+
+#: .\appSkiStick\models.py:10
+msgid "Imagen de la Localización"
+msgstr "Location Image"
+
+#: .\appSkiStick\models.py:19
+msgid "Principiante"
+msgstr "Beginner"
+
+#: .\appSkiStick\models.py:20
+msgid "Amateur"
+msgstr "Amateur"
+
+#: .\appSkiStick\models.py:21
+msgid "Avanzado"
+msgstr "Advanced"
+
+#: .\appSkiStick\models.py:22
+msgid "Experto"
+msgstr "Expert"
+
+#: .\appSkiStick\models.py:23
+msgid "Competitivo"
+msgstr "Competitive"
+
+#: .\appSkiStick\models.py:26
+msgid "Verde"
+msgstr "Green"
+
+#: .\appSkiStick\models.py:27
+msgid "Azul"
+msgstr "Blue"
+
+#: .\appSkiStick\models.py:28
+msgid "Roja"
+msgstr "Red"
+
+#: .\appSkiStick\models.py:29
+msgid "Negra"
+msgstr "Black"
+
+#: .\appSkiStick\models.py:30
+msgid "Competición"
+msgstr "Competition"
+
+#: .\appSkiStick\models.py:35
+msgid "Nivel"
+msgstr "Level"
+
+#: .\appSkiStick\models.py:37
+msgid "Bandera de la Pista"
+msgstr "Track Flag"
+
+#: .\appSkiStick\models.py:39
+msgid "Descripción Corta"
+msgstr "Short Description"
+
+#: .\appSkiStick\models.py:40
+msgid "Descripción Larga"
+msgstr "Long Description"
+
+#: .\appSkiStick\models.py:56 .\appSkiStick\templates\home.html:41
+msgid "Localización"
+msgstr "Location"
+
+#: .\appSkiStick\models.py:61
+msgid "Longitud total esquiable en kilómetros"
+msgstr "Total skiable length in kilometers"
+
+#: .\appSkiStick\models.py:62
+msgid "Kilómetros Esquiables"
+msgstr "Skiable Kilometers"
+
+#: .\appSkiStick\models.py:69 .\appSkiStick\templates\base.html:27
+#: .\appSkiStick\templates\pista_list.html:4
+msgid "Tipos de Pista"
+msgstr "Types of Slopes"
+
+#: .\appSkiStick\models.py:72
+msgid "Imagen"
+msgstr "Image"
+
+#: .\appSkiStick\models.py:75
+msgid "Plano de Pistas"
+msgstr "Slope Map"
+
+#: .\appSkiStick\models.py:84 .\appSkiStick\templates\home.html:36
+msgid "Estación"
+msgstr "Resort"
+
+#: .\appSkiStick\models.py:87
+#: .\appSkiStick\templates\estacion_list.html:17
+msgid "Tipo de Pista"
+msgstr "Type of Slope"
+
+#: .\appSkiStick\models.py:90
+msgid "Número de pistas de este tipo en la estación"
+msgstr "Number of slopes of this type in the resort"
+
+#: .\appSkiStick\models.py:90
+msgid "Cantidad"
+msgstr "Quantity"
+
+#: .\appSkiStick\templates\base.html:7
+msgid ""
+"Sitio web de estaciones de esquí en España y Andorra, con información "
+"detallada sobre pistas y localizaciones."
+msgstr ""
+"Ski resort website in Spain and Andorra, with detailed information about "
+"slopes and locations."
+
+#: .\appSkiStick\templates\base.html:8 .\appSkiStick\templates\base.html:21
+#: .\appSkiStick\templates\home.html:7
+msgid "Ski Stick"
+msgstr "Ski Stick"
+
+#: .\appSkiStick\templates\base.html:24
+msgid "Inicio"
+msgstr "Home"
+
+#: .\appSkiStick\templates\base.html:25
+msgid "Estaciones"
+msgstr "Resorts"
+
+#: .\appSkiStick\templates\base.html:26
+msgid "Localizaciones"
+msgstr "Locations"
+
+#: .\appSkiStick\templates\base.html:41
+msgid "Cambiar idioma"
+msgstr "Change language"
+
+msgid "Km pistas:"
+msgstr "Skiable km:"
+
+#: .\appSkiStick\templates\estacion_detail.html:10
+msgid "Kilómetros esquiables"
+msgstr "Skiable kilometers"
+
+#: .\appSkiStick\templates\estacion_detail.html:12
+#: .\appSkiStick\templates\pista_detail.html:23
+msgid "Pistas"
+msgstr "Slopes"
+
+#: .\appSkiStick\templates\estacion_detail.html:16
+#: .\appSkiStick\templates\estacion_list.html:38
+msgid "pistas"
+msgstr "slopes"
+
+#: .\appSkiStick\templates\estacion_detail.html:22
+msgid "Estación Similar"
+msgstr "Similar Resort"
+
+#: .\appSkiStick\templates\estacion_detail.html:24
+#, python-format
+msgid ""
+"\n"
+"                    La estación más cercana en kilómetros esquiables es "
+"%(estacion)s, con %(km)s km esquiables.\n"
+"                    "
+msgstr ""
+"\n"
+"                    The closest resort in skiable kilometers is %(estacion)s, "
+"with %(km)s skiable kilometers.\n"
+"                    "
+
+
+#: .\appSkiStick\templates\estacion_detail.html:29
+msgid "No hay estaciones similares en esta localización."
+msgstr "There are no similar resorts in this location."
+
+#: .\appSkiStick\templates\estacion_detail.html:39
+msgid "Plano de pistas"
+msgstr "Slope map"
+
+#: .\appSkiStick\templates\estacion_detail.html:40
+msgid "Haz click en la imagen inferior para ver el plano de esta estación:"
+msgstr "Click on the image below to view the map of this resort:"
+
+#: .\appSkiStick\templates\estacion_list.html:4
+msgid "Lista de Estaciones"
+msgstr "List of Resorts"
+
+#: .\appSkiStick\templates\estacion_list.html:7
+#: .\appSkiStick\templates\estacion_list.html:37
+#: .\appSkiStick\templates\localizacion_detail.html:23
+msgid "Localización:"
+msgstr "Location:"
+
+#: .\appSkiStick\templates\estacion_list.html:9
+msgid "Todas"
+msgstr "All"
+
+#: .\appSkiStick\templates\estacion_list.html:19
+msgid "Todos"
+msgstr "All"
+
+#: .\appSkiStick\templates\estacion_list.html:27
+msgid "Filtrar"
+msgstr "Filter"
+
+#: .\appSkiStick\templates\estacion_list.html:38
+msgid "km"
+msgstr "km"
+
+#: .\appSkiStick\templates\estacion_list.html:42
+msgid "No se encontraron estaciones con los filtros seleccionados."
+msgstr "No resorts found with the selected filters."
+
+#: .\appSkiStick\templates\home.html:10
+msgid "Bienvenidos"
+msgstr "Welcome"
+
+#: .\appSkiStick\templates\home.html:12
+msgid ""
+"\n"
+"            ¡Bienvenidos a nuestra guía definitiva de estaciones de esquí!\n"
+"            Aquí encontrarás toda la información que necesitas para "
+"planificar tu próxima aventura en la nieve.\n"
+"            Desde las mejores <a href=\"%(estaciones_url)s\">estaciones</a> "
+"de esquí en diversos rincones de nuestro país hasta una completa descripción "
+"de las mejores <a href=\"%(localizaciones_url)s\">localizaciones</a> y <a "
+"href=\"%(pistas_url)s\">pistas</a>, nuestro objetivo es ayudarte a descubrir "
+"destinos increíbles para todos los niveles y estilos.\n"
+"            Ya seas un principiante que busca pistas suaves o un esquiador "
+"avanzado en busca de descensos desafiantes, aquí encontrarás toda la "
+"información que necesitas para escoger el destino ideal.\n"
+"            ¡Prepárate para deslizarte por las montañas más impresionantes y "
+"vivir momentos inolvidables en la nieve!\n"
+"            "
+msgstr ""
+"\n"
+"Welcome to our ultimate ski resort guide! Here you'll find all the "
+"information you need to plan your next snow adventure. From the best resorts "
+"in various parts of our country to a complete description of the best "
+"locations and slopes, our goal is to help you discover incredible "
+"destinations for all levels and styles. Get ready to glide down the most "
+"impressive mountains and create unforgettable moments in the snow!"
+
+
+#: .\appSkiStick\templates\home.html:21
+msgid "Estaciones Destacadas"
+msgstr "Featured Resorts"
+
+#: .\appSkiStick\templates\home.html:22
+msgid "Estas son las estaciones más largas de cada localización:"
+msgstr "These are the longest resorts in each location:"
+
+#: .\appSkiStick\templates\home.html:26
+msgid "km esquiables"
+msgstr "Skiable kilometers"
+
+#: .\appSkiStick\templates\home.html:28
+msgid "No hay estaciones disponibles"
+msgstr "No resorts available"
+
+#: .\appSkiStick\templates\home.html:35
+msgid "Buscar Estaciones"
+msgstr "Search Resorts"
+
+#: .\appSkiStick\templates\home.html:37
+msgid "Ir a la lista de estaciones"
+msgstr "Go to the list of resorts"
+
+#: .\appSkiStick\templates\home.html:40
+msgid "Buscar Localizaciones"
+msgstr "Search Locations"
+
+
+#: .\appSkiStick\templates\home.html:42
+msgid "Ir a la lista de localizaciones"
+msgstr "Go to the list of locations"
+
+#: .\appSkiStick\templates\home.html:45
+msgid "Buscar Pistas"
+msgstr "Search Slopes"
+
+#: .\appSkiStick\templates\home.html:46
+#: .\appSkiStick\templates\pista_detail.html:5
+msgid "Pista"
+msgstr "Slope"
+
+#: .\appSkiStick\templates\home.html:47
+msgid "Ir a la lista de pistas"
+msgstr "Go to the list of slopes"
+
+#: .\appSkiStick\templates\localizacion_detail.html:14
+msgid "Estaciones Asociadas"
+msgstr "Associated Resorts"
+
+#: .\appSkiStick\templates\localizacion_detail.html:22
+msgid "Km Pistas:"
+msgstr "Skiable Km:"
+
+#: .\appSkiStick\templates\localizacion_detail.html:27
+msgid "No hay estaciones asociadas a esta localización."
+msgstr "There are no resorts associated with this location."
+
+#: .\appSkiStick\templates\localizacion_list.html:6
+msgid "Mapa de Localizaciones"
+msgstr "Location Map"
+
+#: .\appSkiStick\templates\localizacion_list.html:7
+msgid "Un click para conocer un poco las localizaciones"
+msgstr "Click once to learn about the locations"
+
+#: .\appSkiStick\templates\localizacion_list.html:8
+msgid "Doble click para saber detalles ;"
+msgstr "Double-click to view details ;"
+
+#: .\appSkiStick\templates\localizacion_list.html:21
+msgid "Map data"
+msgstr "Map data"
+
+#: .\appSkiStick\templates\localizacion_list.html:21
+msgid "OpenStreetMap contributors"
+msgstr "OpenStreetMap contributors"
+
+#: .\appSkiStick\templates\pista_detail.html:8
+msgid "Estaciones con pistas de"
+msgstr "Resorts with tracks of"
+
+#: .\appSkiStick\templates\pista_detail.html:10
+msgid "Estaciones con pistas azules"
+msgstr "Resorts with blue slopes"
+
+#: .\appSkiStick\templates\pista_detail.html:12
+msgid "Estaciones con pistas"
+msgstr "Resorts with slopes"
+
+#: .\appSkiStick\templates\pista_detail.html:21
+msgid "Pistas de"
+msgstr "Slopes of"
+
+#~ msgid "La estación más cercana en kilómetros esquiables es\n"
+#~ "<a href=\"%(estacion_similar.get_absolute_url)s\">%(estacion_similar."
+#~ "nombre)s</a>,\n"
+#~ "con %(estacion_similar.km_pistas)s km esquiables."
+#~ msgstr "The closest resort in skiable kilometers is\n"
+#~ "<a href=\"%(estacion_similar.get_absolute_url)s\">%(estacion_similar."
+#~ "nombre)s</a>,\n"
+#~ "with %(estacion_similar.km_pistas)s skiable kilometers."
