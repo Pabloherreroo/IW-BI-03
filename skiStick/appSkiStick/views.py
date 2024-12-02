@@ -66,8 +66,7 @@ class LocalizacionListView(ListView):
        # Serializar el QuerySet a una lista de diccionarios
        localizaciones = Localizacion.objects.all().values('id', 'nombre', 'descripcion', 'latitud', 'longitud')
        context['localizaciones_json'] = json.dumps(list(localizaciones))
-        # Imprime en el servidor para verificar
-       print(context['localizaciones_json'])
+    
 
        context['LANGUAGES'] = settings.LANGUAGES
        context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
