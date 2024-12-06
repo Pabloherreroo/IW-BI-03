@@ -23,7 +23,7 @@
 
     localizaciones.forEach(function (loc) {
         var marker = L.marker([loc.latitud, loc.longitud]).addTo(map)
-            .bindPopup(`<strong>${loc.nombre}</strong><br>${loc.descripcion}`);
+            .bindPopup(`<strong>${loc.nombre||loc.nombre_en}</strong><br>${loc.descripcion || loc.descripcion_en }`);
 
         marker.on('dblclick', function () {
             window.location.href = `/localizacion/${loc.id}/`;

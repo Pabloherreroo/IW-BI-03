@@ -3,7 +3,9 @@
     "",
     "\\skiStick",
     "\\skiStick\\appSkiStick",
-    "\\skiStick\\appSkiStick\\templates"
+    "\\skiStick\\appSkiStick\\templates",
+    "\\skiStick\\skiStick"
   ],
+  "SelectedNode": "\\skiStick\\skiStick\\settings.py",
   "PreviewInSolutionExplorer": false
 }

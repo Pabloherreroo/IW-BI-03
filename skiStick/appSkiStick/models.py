@@ -20,14 +20,14 @@ class TipoDePista(models.Model):
         'azul': _("Amateur"),
         'roja': _("Avanzado"),
         'negra': _("Experto"),
-        'competicion': _("Competitivo"),
+        'competición': _("Competitivo"),
     }
     TIPO_CHOICES = [
         ('verde', _("Verde")),
         ('azul', _("Azul")),
         ('roja', _("Roja")),
         ('negra', _("Negra")),
-        ('competicion', _("Competición")),
+        ('competición', _("Competición")),
     ]
     nombre = models.CharField(
         max_length=20, choices=TIPO_CHOICES, unique=True, verbose_name=_("Nombre")
@@ -40,6 +40,8 @@ class TipoDePista(models.Model):
     descripcion_larga = models.TextField(blank=True, null=True, verbose_name=_("Descripción Larga"))
 
     def save(self, *args, **kwargs):
+        print(f"Valor de nombre: '{self.nombre}'")  # Imprime el valor exacto de self.nombre
+        print(f"Claves en TIPO_NIVEL: {self.TIPO_NIVEL.keys()}")  # Imprime las claves disponibles
         self.nivel = self.TIPO_NIVEL[self.nombre]
         super().save(*args, **kwargs)
 
