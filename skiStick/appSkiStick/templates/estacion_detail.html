@@ -9,25 +9,20 @@
 
             <p>{% trans "Kilómetros esquiables" %}: {{ estacion.km_pistas }} km</p>
 
-            <h2>{% trans "Pistas" %}</h2>
-            <ul>
-                {% for tipo in tipos_con_cantidad %}
-                    <li class="estacion-detalle-pistas">
-                        {{ tipo.tipo_de_pista.nombre }}: {{ tipo.cantidad }} {% trans "pistas" %}
-                    </li>
-                {% endfor %}
-            </ul>
-
             {% if estacion_similar %}
-                <h2>{% trans "Estación Similar" %}</h2>
-                <p>
-                    {% blocktrans with estacion=estacion_similar.nombre km=estacion_similar.km_pistas %}
-                    La estación más cercana en kilómetros esquiables es {{ estacion }}, con {{ km }} km esquiables.
-                    {% endblocktrans %}
-                </p>
+            <h2>{% trans "Estación Similar" %}</h2>
+            <p>
+                {% blocktrans with estacion=estacion_similar.nombre km=estacion_similar.km_pistas %}
+                La estación más cercana en kilómetros esquiables es {{ estacion }}, con {{ km }} km esquiables.
+                {% endblocktrans %}
+            </p>
             {% else %}
-                <p>{% trans "No hay estaciones similares en esta localización." %}</p>
+            <p>{% trans "No hay estaciones similares en esta localización." %}</p>
             {% endif %}
+
+            <!-- Contenedor para el gráfico -->
+            <h2>{% trans "Distribución de Tipos de Pistas" %}</h2>
+            <canvas id="tipoDePistasChart" width="400" height="400"></canvas>
         </div>
         {% if estacion.imagen %}
             <img src="{{ estacion.imagen.url }}" alt="{{ estacion.nombre }}" class="estacion-detalle-imagen">
@@ -47,6 +42,60 @@
         function openInNewTab(url) {
             window.open(url, '_blank').focus();
         }
+
+        //generar el gráfico
+        const ctx = document.getElementById('tipoDePistasChart').getContext('2d');
+        const tipos = JSON.parse('{{ tipos_con_cantidad|escapejs }}');
+        console.log("Datos para el gráfico:", tipos);
+
+
+        const labels = tipos.map(item => item.tipo_de_pista__nombre); // Nombres de los tipos de pistas
+        const data = tipos.map(item => item.cantidad); // Cantidad de cada tipo
+        console.log("Etiquetas:", labels);
+        console.log("Datos:", data);
+
+        const myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: '{% trans "Tipos de Pistas" %}',
+                    data: data,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                return `${tooltipItem.label}: ${tooltipItem.raw} {% trans "pistas" %}`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
     </script>
     {% endif %}
 </div>

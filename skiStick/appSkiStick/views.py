@@ -2,9 +2,11 @@ import json
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, TemplateView
 from .models import Estacion, Localizacion, TipoDePista, EstacionTipoDePista
-from django.db.models import F
+from django.db.models import Count, F
 from django.db.models.functions import Abs
 from django.conf import settings
+from django.core.serializers.json import DjangoJSONEncoder
+
 
 
 class HomeView(TemplateView):
@@ -39,8 +41,16 @@ class EstacionDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         # Obtener el número de pistas por tipo para esta estación
         estacion = self.get_object()
-        tipos_con_cantidad = EstacionTipoDePista.objects.filter(estacion=estacion)
-        context['tipos_con_cantidad'] = tipos_con_cantidad
+        #-- Obtener el número de pistas por tipo para esta estación
+        tipos_con_cantidad = (
+            EstacionTipoDePista.objects.filter(estacion=estacion)
+            .values('tipo_de_pista__nombre', 'cantidad')
+        )
+        print("Tipos con cantidad:", list(tipos_con_cantidad))
+        #-- Serializar datos para el gráfico
+        context['tipos_con_cantidad'] = json.dumps(
+            list(tipos_con_cantidad), cls=DjangoJSONEncoder
+        )
 
         #Indicaremos como sugerencia la estación más cercana en km de pistas de la misma cadena (excluyendo la actual)
         estacion_similar = Estacion.objects.filter(
