@@ -6,6 +6,7 @@ from django.db.models import Count, F
 from django.db.models.functions import Abs
 from django.conf import settings
 from django.core.serializers.json import DjangoJSONEncoder
+from django.urls import reverse
 
 
 
@@ -39,18 +40,25 @@ class EstacionDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # Obtener el número de pistas por tipo para esta estación
         estacion = self.get_object()
-        #-- Obtener el número de pistas por tipo para esta estación
+        #Obtener el número de pistas por tipo para esta estación
         tipos_con_cantidad = (
             EstacionTipoDePista.objects.filter(estacion=estacion)
-            .values('tipo_de_pista__nombre', 'cantidad')
+    .       values('tipo_de_pista__id', 'tipo_de_pista__nombre', 'cantidad')
         )
         print("Tipos con cantidad:", list(tipos_con_cantidad))
         #-- Serializar datos para el gráfico
         context['tipos_con_cantidad'] = json.dumps(
             list(tipos_con_cantidad), cls=DjangoJSONEncoder
         )
+        # Añadir la URL para cada tipo de pista
+        for tipo in tipos_con_cantidad:
+            tipo['url'] = reverse('pista_detail', args=[tipo['tipo_de_pista__id']])
+
+        print("Tipos con cantidad:", list(tipos_con_cantidad))
+
+        # Serializar los datos para el gráfico
+        context['tipos_con_cantidad'] = json.dumps(list(tipos_con_cantidad), cls=DjangoJSONEncoder)
 
         #Indicaremos como sugerencia la estación más cercana en km de pistas de la misma cadena (excluyendo la actual)
         estacion_similar = Estacion.objects.filter(

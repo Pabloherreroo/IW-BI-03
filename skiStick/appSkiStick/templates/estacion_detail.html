@@ -44,38 +44,39 @@
         }
 
         //generar el gráfico
-        const ctx = document.getElementById('tipoDePistasChart').getContext('2d');
+
         const tipos = JSON.parse('{{ tipos_con_cantidad|escapejs }}');
-        console.log("Datos para el gráfico:", tipos);
+        console.log("Datos recibidos para la gráfica:", tipos);
 
 
         const labels = tipos.map(item => item.tipo_de_pista__nombre); // Nombres de los tipos de pistas
         const data = tipos.map(item => item.cantidad); // Cantidad de cada tipo
-        console.log("Etiquetas:", labels);
-        console.log("Datos:", data);
+        const urls = tipos.map(item => item.url); //Link para vincular a cada tipo de pista
+        console.log("Labels:", labels);
+        console.log("Data:", data);
+        console.log("URLs:", urls);
 
+        const ctx = document.getElementById('tipoDePistasChart').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'pie',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: '{% trans "Tipos de Pistas" %}',
+                    label: 'Distribución de Tipos de Pistas',
                     data: data,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
                         'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        'rgba(153, 102, 255, 0.2)'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
                         'rgba(54, 162, 235, 1)',
                         'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'rgba(153, 102, 255, 1)'
                     ],
                     borderWidth: 1
                 }]
@@ -86,12 +87,11 @@
                     legend: {
                         position: 'top',
                     },
-                    tooltip: {
-                        callbacks: {
-                            label: function (tooltipItem) {
-                                return `${tooltipItem.label}: ${tooltipItem.raw} {% trans "pistas" %}`;
-                            }
-                        }
+                },
+                onClick: function (event, elements) {
+                    if (elements.length > 0) {
+                        const index = elements[0].index;
+                        window.location.href = urls[index];
                     }
                 }
             }

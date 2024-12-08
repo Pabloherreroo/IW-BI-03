@@ -3,9 +3,10 @@
     "",
     "\\skiStick",
     "\\skiStick\\appSkiStick",
+    "\\skiStick\\appSkiStick\\scripts",
     "\\skiStick\\appSkiStick\\templates",
     "\\skiStick\\skiStick"
   ],
-  "SelectedNode": "\\skiStick\\appSkiStick\\translation.py",
+  "SelectedNode": "\\skiStick\\appSkiStick\\views.py",
   "PreviewInSolutionExplorer": false
 }
