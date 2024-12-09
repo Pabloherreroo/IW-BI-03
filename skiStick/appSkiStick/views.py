@@ -2,7 +2,7 @@ import json
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, TemplateView
 from .models import Estacion, Localizacion, TipoDePista, EstacionTipoDePista
-from django.db.models import Count, F
+from django.db.models import F
 from django.db.models.functions import Abs
 from django.conf import settings
 from django.core.serializers.json import DjangoJSONEncoder

@@ -9,7 +9,7 @@ class LocalizacionTranslationOptions(TranslationOptions):
 # Translation for TipoDePista model
 @register(TipoDePista)
 class TipoDePistaTranslationOptions(TranslationOptions):
-    fields = ('descripcion_corta', 'descripcion_larga')  # Fields to be translated
+    fields = ('nombre', 'descripcion_corta', 'descripcion_larga')  # Fields to be translated
 
 # Translation for Estacion model
 @register(Estacion)
