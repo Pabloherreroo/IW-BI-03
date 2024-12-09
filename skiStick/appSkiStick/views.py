@@ -46,7 +46,7 @@ class EstacionDetailView(DetailView):
             EstacionTipoDePista.objects.filter(estacion=estacion)
     .       values('tipo_de_pista__id', 'tipo_de_pista__nombre', 'cantidad')
         )
-        print("Tipos con cantidad:", list(tipos_con_cantidad))
+        #print("Tipos con cantidad:", list(tipos_con_cantidad))
         #-- Serializar datos para el gráfico
         context['tipos_con_cantidad'] = json.dumps(
             list(tipos_con_cantidad), cls=DjangoJSONEncoder
@@ -55,7 +55,7 @@ class EstacionDetailView(DetailView):
         for tipo in tipos_con_cantidad:
             tipo['url'] = reverse('pista_detail', args=[tipo['tipo_de_pista__id']])
 
-        print("Tipos con cantidad:", list(tipos_con_cantidad))
+        #print("Tipos con cantidad:", list(tipos_con_cantidad))
 
         # Serializar los datos para el gráfico
         context['tipos_con_cantidad'] = json.dumps(list(tipos_con_cantidad), cls=DjangoJSONEncoder)
