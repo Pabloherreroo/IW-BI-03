@@ -218,13 +218,13 @@ footer {
     margin: 5px 0;
 }
 
-    .chart-legend li span {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-        border-radius: 50%;
-    }
+.chart-legend li span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
 
 /* Darker effect on hover */
 .chart-container canvas:hover {
@@ -451,3 +451,110 @@ footer {
     margin: 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+
+
+/*FORMULARIO*/
+nav ul li a[href*="incidente_form"] {
+    font-weight: bold;
+    color: red;
+}
+/* Estilo específico para el formulario de reporte de incidentes */
+.form-incidente {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo claro */
+    border: 1px solid #dee2e6; /* Borde gris suave */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: Arial, sans-serif;
+}
+
+/* Títulos y etiquetas del formulario */
+.form-incidente h2 {
+    text-align: center;
+    color: #343a40; /* Gris oscuro */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.form-incidente label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #495057; /* Gris medio */
+}
+
+/* Campos de entrada */
+.form-incidente input[type="text"],
+.form-incidente input[type="datetime-local"],
+.form-incidente textarea,
+.form-incidente select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; /* Gris claro */
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff; /* Blanco */
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-incidente input[type="text"]:focus,
+.form-incidente input[type="datetime-local"]:focus,
+.form-incidente textarea:focus,
+.form-incidente select:focus {
+    border-color: #007bff; /* Azul al enfocar */
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Sombra azul */
+}
+
+/* Botón de envío */
+.form-incidente button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Texto blanco */
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-transform: uppercase;
+}
+
+.form-incidente button[type="submit"]:hover {
+        background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Estilo para campos opcionales */
+.form-incidente .optional {
+    font-style: italic;
+    color: #6c757d; /* Gris claro */
+}
+
+/* Mensajes de error */
+.form-incidente .error {
+    color: #dc3545; /* Rojo */
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo para imágenes */
+.form-incidente input[type="file"] {
+    border: none;
+    background-color: #e9ecef; /* Gris muy claro */
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Mensaje de éxito */
+.form-incidente .success {
+    text-align: center;
+    color: #28a745; /* Verde */
+    font-weight: bold;
+    margin-top: 20px;
+}
+

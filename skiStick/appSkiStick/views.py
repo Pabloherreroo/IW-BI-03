@@ -1,12 +1,13 @@
 import json
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, TemplateView
-from .models import Estacion, Localizacion, TipoDePista, EstacionTipoDePista
+from django.views.generic import CreateView, ListView, DetailView, TemplateView
+from .models import Estacion, Incidente, Localizacion, TipoDePista, EstacionTipoDePista
 from django.db.models import F
 from django.db.models.functions import Abs
 from django.conf import settings
 from django.core.serializers.json import DjangoJSONEncoder
 from django.urls import reverse
+from .forms import IncidenteForm
 
 
 
@@ -161,3 +162,15 @@ class EstacionListView(ListView):
         context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
         return context
     
+# Formulario de incidencias
+class ReportarIncidenteView(CreateView):
+    model = Incidente
+    form_class = IncidenteForm
+    template_name = 'reportar_incidente.html'
+
+    def form_valid(self, form):
+        #Notificacion de mensajes
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('home')

@@ -19,3 +19,5 @@ venv.bak/
 # Archivos de configuraciones del sistema
 .DS_Store
 Thumbs.db
+skiStick/skiStick/__pycache__/settings.cpython-313.pyc
+skiStick/skiStick/__pycache__/settings.cpython-313.pyc

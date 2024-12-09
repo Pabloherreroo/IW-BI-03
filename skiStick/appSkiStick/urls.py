@@ -7,6 +7,7 @@ from .views import (
     LocalizacionDetailView,
     PistaListView,
     PistaDetailView,
+    ReportarIncidenteView,
     HomeView,
 )
 from django.conf import settings
@@ -19,6 +20,7 @@ urlpatterns = [
     path('localizacion/<int:pk>/', LocalizacionDetailView.as_view(), name='localizacion_detail'),
     path('pistas/', PistaListView.as_view(), name='pista_list'),
     path('pista/<int:pk>/', PistaDetailView.as_view(), name='pista_detail'),
+    path('incidente/reportar/', ReportarIncidenteView.as_view(), name='incidente_form'),
     path('', HomeView.as_view(), name='home'),
 ]
 

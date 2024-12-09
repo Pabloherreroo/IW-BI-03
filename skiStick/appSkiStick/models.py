@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.utils.timezone import now
 
 class Localizacion(models.Model):
     nombre = models.CharField(max_length=100, unique=True, verbose_name=_("Nombre"))
@@ -97,3 +98,19 @@ class EstacionTipoDePista(models.Model):
 
     def __str__(self):
         return f"{self.estacion.nombre} - {self.tipo_de_pista.get_nombre_display()}: {self.cantidad} pistas"
+
+class Incidente(models.Model):
+    ubicacion_pista = models.ForeignKey(Localizacion, on_delete=models.CASCADE, related_name="incidentes")
+    descripcion = models.TextField()
+    fecha_hora = models.DateTimeField()
+    fotos = models.ImageField(upload_to='incidentes/', blank=True, null=True)
+    datos_contacto = models.CharField(max_length=255, blank=True, null=True)
+    resuelto = models.BooleanField(default=False)
+   
+
+    def ubicacion(self):
+        return self.ubicacion_pista.nombre
+
+    def __str__(self):
+        return f"Incidente en {self.ubicacion_pista.nombre} el {self.fecha_hora.strftime('%Y-%m-%d %H:%M')}"
+    

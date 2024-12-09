@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.contrib.admin.sites import AdminSite
 from .models import Estacion, Localizacion, TipoDePista, EstacionTipoDePista
 from django.templatetags.static import static
+from .models import Incidente
 
 class EstacionTipoDePistaInline(admin.TabularInline):
     model = EstacionTipoDePista
@@ -47,6 +48,29 @@ class TipoDePistaAdmin(admin.ModelAdmin):
             'all': ('admin/css/admin.css',)
         }
 
+@admin.register(Incidente)
+class IncidenteAdmin(admin.ModelAdmin):
+    list_display = ('ubicacion', 'fecha_hora', 'descripcion', 'resuelto')
+    list_filter = ('resuelto', 'ubicacion_pista')
+    search_fields = ('descripcion', 'ubicacion_pista__nombre')
+    ordering = ('-fecha_hora',)
+    readonly_fields = ('fecha_hora',)
+
+    def has_view_permission(self, request, obj=None):
+        return request.user.is_superuser or request.user.has_perm("appSkiStick.view_incidente")
+
+    def has_change_permission(self, request, obj=None):
+        return request.user.is_superuser or request.user.has_perm("appSkiStick.change_incidente")
+
+    def has_add_permission(self, request, obj=None):
+        return request.user.is_superuser or request.user.has_perm("appSkiStick.add_incidente")
+
+    def has_delete_permission(self, request, obj=None):
+        return request.user.is_superuser or request.user.has_perm("appSkiStick.delete_incidente")
+
+    def has_module_permission(self, request):
+        return self.has_view_permission(request)
+
 class CustomAdminSite(AdminSite):
     site_header = "SkiStick Admin"
     site_title = "SkiStick Admin Portal"
@@ -62,4 +86,4 @@ custom_admin_site = CustomAdminSite(name="custom_admin")
 custom_admin_site.register(Localizacion)
 custom_admin_site.register(TipoDePista, TipoDePistaAdmin)
 custom_admin_site.register(Estacion, EstacionAdmin)
-
+custom_admin_site.register(Incidente, IncidenteAdmin)

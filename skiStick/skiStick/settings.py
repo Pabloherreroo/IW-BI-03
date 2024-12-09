@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-
+from django.core.mail import send_mail
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -153,3 +153,24 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+#enviar notificaciones al administrador
+def reportar_incidente(request):
+    if request.method == 'POST':
+        form = IncidenteForm(request.POST, request.FILES)
+        if form.is_valid():
+            incidente = form.save()
+            # Enviar notificación por email
+            send_mail(
+                'Nuevo Incidente Reportado',
+                f'Se ha reportado un nuevo incidente en {incidente.ubicacion_estacion}:\n\n{incidente.descripcion}\n\nFecha y hora: {incidente.fecha_hora_incidente}',
+                'admin@example.com',
+                ['admin@example.com'],  # Lista de destinatarios
+                fail_silently=False,
+            )
+            messages.success(request, 'El incidente ha sido reportado con éxito. Los administradores han sido notificados.')
+            return redirect('inicio')
+    else:
+        form = IncidenteForm()
+    return render(request, 'reportar_incidente.html', {'form': form})
