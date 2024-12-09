@@ -120,8 +120,8 @@ msgstr "Resort"
 
 #: .\appSkiStick\models.py:87
 #: .\appSkiStick\templates\estacion_list.html:17
-msgid "Tipo de Pista"
-msgstr "Type of Slope"
+msgid "Tipo de Pista:"
+msgstr "Type of Slope:"
 
 #: .\appSkiStick\models.py:90
 msgid "Número de pistas de este tipo en la estación"
@@ -347,4 +347,6 @@ msgstr "Slopes of"
 #~ "nombre)s</a>,\n"
 #~ "with %(estacion_similar.km_pistas)s skiable kilometers."
 
-
+#: .\appSkiStick\templates\estacion_detail.html:26
+msgid "Distribución de Tipos de Pistas"
+msgstr "Types of Slopes Distribution"
