@@ -15,16 +15,14 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['estaciones_destacadas'] = {
-            #Pongo la primera de cada cadena montañosa
-            'Andorra': Estacion.objects.filter(localizacion__nombre='Andorra').order_by('-km_pistas').first(),
-            'Pirineo Catalán': Estacion.objects.filter(localizacion__nombre='Pirineo Catalán').order_by('-km_pistas').first(),
-            'Pirineo Aragonés': Estacion.objects.filter(localizacion__nombre='Pirineo Aragonés').order_by('-km_pistas').first(),
-            'Sistema Penibético': Estacion.objects.filter(localizacion__nombre='Sistema Penibético').order_by('-km_pistas').first(),
-            'Cordillera Cantábrica': Estacion.objects.filter(localizacion__nombre='Cordillera Cantábrica').order_by('-km_pistas').first(),
-            'Sistema Ibérico': Estacion.objects.filter(localizacion__nombre='Sistema Ibérico').order_by('-km_pistas').first(),
-            'Sierra de Guadarrama': Estacion.objects.filter(localizacion__nombre='Sierra de Guadarrama').order_by('-km_pistas').first(),
-        }
+        # Crear diccionario dinámico para estaciones mas largas de cada sitio
+        estaciones_destacadas = {}
+        for localizacion in Localizacion.objects.all():
+            estacion_mas_larga = Estacion.objects.filter(localizacion=localizacion).order_by('-km_pistas').first()
+            if estacion_mas_larga:
+                estaciones_destacadas[localizacion.nombre] = estacion_mas_larga
+
+        context['estaciones_destacadas'] = estaciones_destacadas
         context['localizaciones'] = Localizacion.objects.all()
         context['tipos_de_pista'] = TipoDePista.objects.all()
         context['LANGUAGES'] = settings.LANGUAGES
