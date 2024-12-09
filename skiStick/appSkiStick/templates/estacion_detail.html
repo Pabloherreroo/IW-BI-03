@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/estacion_detail.css' %}">
+
 <div class="estacion-detalle">
     <h1 class="estacion-titulo">{{ estacion.nombre }}</h1>
     <div class="estacion-detalle-info-imagen">
@@ -22,13 +25,15 @@
 
             <!-- Contenedor para el gráfico -->
             <h2>{% trans "Distribución de Tipos de Pistas" %}</h2>
-            <canvas id="tipoDePistasChart" width="400" height="400"></canvas>
+            <div class="chart-container">
+                <canvas id="tipoDePistasChart"></canvas>
+            </div>
         </div>
         {% if estacion.imagen %}
-            <img src="{{ estacion.imagen.url }}" alt="{{ estacion.nombre }}" class="estacion-detalle-imagen">
+        <img src="{{ estacion.imagen.url }}" alt="{{ estacion.nombre }}" class="estacion-detalle-imagen">
         {% endif %}
     </div>
-    
+
     {% if estacion.imagen_plano %}
     <div class="estacion-detalle-info-plano">
         <h2>{% trans "Plano de pistas" %}</h2>
@@ -43,18 +48,11 @@
             window.open(url, '_blank').focus();
         }
 
-        //generar el gráfico
-
+        // Generar el gráfico
         const tipos = JSON.parse('{{ tipos_con_cantidad|escapejs }}');
-        console.log("Datos recibidos para la gráfica:", tipos);
-
-
-        const labels = tipos.map(item => item.tipo_de_pista__nombre); // Nombres de los tipos de pistas
-        const data = tipos.map(item => item.cantidad); // Cantidad de cada tipo
-        const urls = tipos.map(item => item.url); //Link para vincular a cada tipo de pista
-        console.log("Labels:", labels);
-        console.log("Data:", data);
-        console.log("URLs:", urls);
+        const labels = tipos.map(tipo => tipo.tipo_de_pista__nombre);
+        const data = tipos.map(tipo => tipo.cantidad);
+        const urls = tipos.map(tipo => tipo.url);
 
         const ctx = document.getElementById('tipoDePistasChart').getContext('2d');
         const myChart = new Chart(ctx, {
@@ -62,20 +60,20 @@
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Distribución de Tipos de Pistas',
+                    label: '{% trans "Tipos de Pistas" %}',
                     data: data,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
                         'rgba(75, 192, 192, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(0,0,0, 0.2)',
                         'rgba(153, 102, 255, 0.2)'
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(0, 0, 0)',
                         'rgba(153, 102, 255, 1)'
                     ],
                     borderWidth: 1
@@ -100,6 +98,3 @@
     {% endif %}
 </div>
 {% endblock %}
-
-
-
