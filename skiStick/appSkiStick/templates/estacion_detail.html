@@ -11,13 +11,19 @@
 
             <p>{% trans "Kilómetros esquiables" %}: {{ estacion.km_pistas }} km</p>
 
+            <p>
+                {% trans "Esta estación se encuentra en el entorno de" %} 
+                <a href="/localizacion/{{ estacion.localizacion.id }}/">{{ estacion.localizacion.nombre }}</a>
+            </p>
+
             {% if estacion_similar %}
             <h2>{% trans "Estación Similar" %}</h2>
             <p>
-                {% blocktrans with estacion=estacion_similar.nombre km=estacion_similar.km_pistas %}
-                La estación más cercana en kilómetros esquiables es {{ estacion }}, con {{ km }} km esquiables.
-                {% endblocktrans %}
+                {% trans "La estación más cercana en kilómetros esquiables es" %}
+                <a href="/estacion/{{ estacion_similar.id }}/">{{ estacion_similar.nombre }}</a>,
+                {% trans "con" %} {{ estacion_similar.km_pistas }} km {% trans "esquiables." %}
             </p>
+            
             {% else %}
             <p>{% trans "No hay estaciones similares en esta localización." %}</p>
             {% endif %}

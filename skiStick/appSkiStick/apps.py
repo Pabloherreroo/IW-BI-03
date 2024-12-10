@@ -18,13 +18,15 @@ class AppSkiStickConfig(AppConfig):
         from .models import Estacion, TipoDePista
 
         grupos = {
-            "Admin Estaciones": ["change_estacion", "view_estacion"],
+            "Admin Estaciones": ["change_estacion", "view_estacion", "add_estacion", "delete_estacion"],
             "Admin Tipos de Pista": ["change_tipodepista", "view_tipodepista"],
         }
 
         modelos = {
             "change_estacion": Estacion,
             "view_estacion": Estacion,
+            "add_estacion": Estacion,
+            "delete_estacion": Estacion,
             "change_tipodepista": TipoDePista,
             "view_tipodepista": TipoDePista,
         }

@@ -364,15 +364,17 @@ msgstr "Resorts with slopes"
 msgid "Pistas de"
 msgstr "Slopes of"
 
-#~ msgid "La estación más cercana en kilómetros esquiables es\n"
-#~ "<a href=\"%(estacion_similar.get_absolute_url)s\">%(estacion_similar."
-#~ "nombre)s</a>,\n"
-#~ "con %(estacion_similar.km_pistas)s km esquiables."
-#~ msgstr "The closest resort in skiable kilometers is\n"
-#~ "<a href=\"%(estacion_similar.get_absolute_url)s\">%(estacion_similar."
-#~ "nombre)s</a>,\n"
-#~ "with %(estacion_similar.km_pistas)s skiable kilometers."
+
+msgid "La estación más cercana en kilómetros esquiables es"
+msgstr "The closest resort in skiable kilometers is"
+msgid "con"
+msgstr "with"
+msgid "esquiables."
+msgstr "of slopes."
 
 #: .\appSkiStick\templates\estacion_detail.html:26
 msgid "Distribución de Tipos de Pistas"
 msgstr "Types of Slopes Distribution"
+
+msgid "Esta estación se encuentra en el entorno de"
+msgstr "This resort is located in"

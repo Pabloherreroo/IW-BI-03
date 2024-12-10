@@ -20,6 +20,12 @@ class EstacionAdmin(admin.ModelAdmin):
         if request.user.is_superuser:
             return True
         return request.user.has_perm("appSkiStick.change_estacion")
+    
+    def has_add_permission(self, request, obj=None):
+        return request.user.is_superuser or request.user.has_perm("appSkiStick.add_estacion")
+
+    def has_delete_permission(self, request, obj=None):
+        return request.user.is_superuser or request.user.has_perm("appSkiStick.delete_estacion")
 
     def has_module_permission(self, request):
         return self.has_view_permission(request)
@@ -70,6 +76,11 @@ class IncidenteAdmin(admin.ModelAdmin):
 
     def has_module_permission(self, request):
         return self.has_view_permission(request)
+    
+    class Media:
+        css = {
+            'all': ('admin/css/admin.css',)
+        }
 
 class CustomAdminSite(AdminSite):
     site_header = "SkiStick Admin"

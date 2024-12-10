@@ -10,8 +10,6 @@ from django.urls import reverse
 from .forms import IncidenteForm
 from django.contrib import messages
 
-
-
 class HomeView(TemplateView):
     template_name = "home.html"
 
