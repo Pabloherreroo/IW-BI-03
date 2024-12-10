@@ -8,6 +8,7 @@ from django.conf import settings
 from django.core.serializers.json import DjangoJSONEncoder
 from django.urls import reverse
 from .forms import IncidenteForm
+from django.contrib import messages
 
 
 
@@ -168,9 +169,17 @@ class ReportarIncidenteView(CreateView):
     form_class = IncidenteForm
     template_name = 'reportar_incidente.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['LANGUAGES'] = settings.LANGUAGES
+        context['LANGUAGE_CODE'] = self.request.LANGUAGE_CODE
+        return context
+
     def form_valid(self, form):
-        #Notificacion de mensajes
-        return super().form_valid(form)
+        response = super().form_valid(form)
+        # Añadir un mensaje de éxito
+        messages.success(self.request, "El incidente ha sido reportado exitosamente.")
+        return response
 
     def get_success_url(self):
         return reverse('home')

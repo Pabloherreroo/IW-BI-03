@@ -1,31 +1,31 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block content %}
 <div class="form-incidente">
-    <h1>Reportar Incidente</h1>
+    <h1>{% trans "Reportar Incidente" %}</h1>
     <form method="post" enctype="multipart/form-data" novalidate>
         {% csrf_token %}
         <div class="mb-3">
-            <label for="id_ubicacion_pista" class="form-label">Localizacion</label>
+            <label for="id_ubicacion_pista" class="form-label">{% trans "Localización:" %}</label>
             {{ form.ubicacion_pista }}
         </div>
         <div class="mb-3">
-            <label for="id_descripcion" class="form-label">Descripcion del incidente</label>
+            <label for="id_descripcion" class="form-label">{% trans "Descripción del Incidente:" %}</label>
             {{ form.descripcion }}
         </div>
         <div class="mb-3">
-            <label for="id_fecha_hora" class="form-label">Fecha y hora del incidente</label>
+            <label for="id_fecha_hora" class="form-label">{% trans "Fecha y Hora del Incidente:" %}</label>
             {{ form.fecha_hora }}
         </div>
         <div class="mb-3">
-            <label for="id_fotos" class="form-label">Fotos del incidente (opcional)</label>
+            <label for="id_fotos" class="form-label">{% trans "Fotos del Incidente (opcional):" %}</label>
             {{ form.fotos }}
         </div>
         <div class="mb-3">
-            <label for="id_datos_contacto" class="form-label">Datos de contacto (opcional)</label>
+            <label for="id_datos_contacto" class="form-label">{% trans "Datos de contacto (opcional):" %}</label>
             {{ form.datos_contacto }}
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">{% trans "Enviar" %}</button>
     </form>
 </div>
 {% endblock %}
