@@ -214,8 +214,34 @@ msgstr "List of Resorts"
 #: .\appSkiStick\templates\estacion_list.html:7
 #: .\appSkiStick\templates\estacion_list.html:37
 #: .\appSkiStick\templates\localizacion_detail.html:23
+#: .\appSkiStick\templates\reportar_incidente.html:9
 msgid "Localización:"
 msgstr "Location:"
+
+#: .\appSkiStick\templates\reportar_incidente.html:5
+#: .\appSkiStick\templates\base.html:31
+msgid "Reportar Incidente"
+msgstr "Report Issue"
+
+#: .\appSkiStick\templates\reportar_incidente.html:13
+msgid "Descripción del Incidente:"
+msgstr "Issue Description:"
+
+#: .\appSkiStick\templates\reportar_incidente.html:17
+msgid "Fecha y Hora del Incidente:"
+msgstr "Exact Date of the Issue:"
+
+#: .\appSkiStick\templates\reportar_incidente.html:21
+msgid "Fotos del Incidente (opcional):"
+msgstr "Related Pictures (optional):"
+
+#: .\appSkiStick\templates\reportar_incidente.html:25
+msgid "Datos de contacto (opcional):"
+msgstr "Contact Data (optional):"
+
+#: .\appSkiStick\templates\reportar_incidente.html:28
+msgid "Enviar"
+msgstr "Send"
 
 #: .\appSkiStick\templates\estacion_list.html:9
 msgid "Todas"
